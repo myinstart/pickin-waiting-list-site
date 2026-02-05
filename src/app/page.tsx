@@ -1,8 +1,24 @@
+'use client';
+
 import WaitingListForm from './components/WaitingListForm';
+import LanguageSwitcher from './components/LanguageSwitcher';
+import { useTranslation } from '@/i18n/context';
 
 export default function Home() {
+	const { t } = useTranslation();
+
 	return (
 		<div className="min-h-screen snap-container">
+			{/* ===== Header ===== */}
+			<header className="fixed top-0 left-0 right-0 z-50 px-6 py-4">
+				<div className="max-w-6xl mx-auto flex items-center justify-between">
+					<span className="text-gradient text-lg font-bold">
+						PICKIN
+					</span>
+					<LanguageSwitcher />
+				</div>
+			</header>
+
 			{/* ===== Section 1: Hero ===== */}
 			<section className="hero-gradient min-h-screen flex items-center justify-center px-6 py-20 snap-section relative">
 				<div className="relative z-10 text-center max-w-2xl mx-auto -mt-16 sm:-mt-20">
@@ -10,7 +26,7 @@ export default function Home() {
 					<div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/8 border border-white/10 mb-8 backdrop-blur-sm">
 						<div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
 						<span className="text-white/70 text-xs font-medium tracking-wide">
-							Coming Soon — 사전 등록 진행 중
+							{t('hero.badge')}
 						</span>
 					</div>
 
@@ -21,15 +37,17 @@ export default function Home() {
 
 					{/* Subtitle */}
 					<p className="text-lg sm:text-xl text-white/60 leading-relaxed mb-4 font-medium">
-						뷰티 브랜드와 동남아 인플루언서를 잇는
+						{t('hero.subtitle')}
 						<br className="sm:hidden" />{' '}
-						<span className="text-white/90">AI 기반 매칭 플랫폼</span>
+						<span className="text-white/90">
+							{t('hero.subtitleHighlight')}
+						</span>
 					</p>
 
 					<p className="text-sm sm:text-base text-white/40 leading-relaxed mb-10 max-w-md mx-auto">
-						데이터 기반 최적의 매칭으로, 브랜드는 딱 맞는 인플루언서를,
+						{t('hero.description1')}
 						<br />
-						인플루언서는 나에게 맞는 브랜드를 만나보세요.
+						{t('hero.description2')}
 					</p>
 
 					{/* CTA Button */}
@@ -37,7 +55,7 @@ export default function Home() {
 						href="#waitlist"
 						className="btn-gradient inline-flex items-center gap-2 px-8 py-4 rounded-full text-white font-semibold text-base shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 transition-shadow duration-300"
 					>
-						<span>웨이팅리스트 등록하기</span>
+						<span>{t('hero.cta')}</span>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							width="18"
@@ -149,11 +167,10 @@ export default function Home() {
 							WHY PICKIN
 						</p>
 						<h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-5">
-							해외 인플루언서 마케팅,
-							<br className="sm:hidden" /> 아직도 감으로 하시나요?
+							{t('whyPickin.title')}
 						</h2>
 						<p className="text-muted text-base sm:text-lg max-w-xl mx-auto leading-relaxed">
-							기존의 비효율적인 방식으로는 해외 성과를 만들 수 없습니다
+							{t('whyPickin.subtitle')}
 						</p>
 					</div>
 
@@ -177,15 +194,13 @@ export default function Home() {
 								</svg>
 							</div>
 							<h3 className="text-lg font-bold text-foreground mb-2">
-								평균 2주 이상 걸리는 서칭과 매칭
+								{t('whyPickin.card1Title')}
 							</h3>
 							<p className="text-sm text-muted leading-relaxed mb-4">
-								해외 인플루언서 서칭과 비교에 불필요한 시간이 계속 소모됩니다.
+								{t('whyPickin.card1Problem')}
 							</p>
 							<p className="text-sm text-primary font-medium leading-relaxed">
-								PICKIN은 AI 추천으로
-								<br />
-								동남아 인플루언서를 빠르게 연결합니다.
+								{t('whyPickin.card1Solution')}
 							</p>
 						</div>
 
@@ -209,15 +224,13 @@ export default function Home() {
 								</svg>
 							</div>
 							<h3 className="text-lg font-bold text-foreground mb-2">
-								협업을 가로막는 언어 장벽
+								{t('whyPickin.card2Title')}
 							</h3>
 							<p className="text-sm text-muted leading-relaxed mb-4">
-								언어 문제로 협업이 지연되거나 의사 전달이 왜곡됩니다.
+								{t('whyPickin.card2Problem')}
 							</p>
 							<p className="text-sm text-primary font-medium leading-relaxed">
-								PICKIN은 자동 번역 기반 환경으로
-								<br />
-								언어 장벽 없이 협업을 가능하게 합니다.
+								{t('whyPickin.card2Solution')}
 							</p>
 						</div>
 
@@ -241,16 +254,13 @@ export default function Home() {
 								</svg>
 							</div>
 							<h3 className="text-lg font-bold text-foreground mb-2">
-								기준 없는 마구잡이식 협업
+								{t('whyPickin.card3Title')}
 							</h3>
 							<p className="text-sm text-muted leading-relaxed mb-4">
-								명확한 기준 없이 진행되는 협업은 진행 상황을 파악하기
-								어렵습니다.
+								{t('whyPickin.card3Problem')}
 							</p>
 							<p className="text-sm text-primary font-medium leading-relaxed">
-								PICKIN은 명확한 단계 구조로
-								<br />
-								해외 인플루언서 협업을 쉽게 만듭니다.
+								{t('whyPickin.card3Solution')}
 							</p>
 						</div>
 					</div>
@@ -265,11 +275,10 @@ export default function Home() {
 							HOW IT WORKS
 						</p>
 						<h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-5">
-							3단계로 시작하는
-							<br className="sm:hidden" /> 스마트 매칭
+							{t('howItWorks.title')}
 						</h2>
 						<p className="text-muted text-base sm:text-lg max-w-xl mx-auto leading-relaxed">
-							간단한 프로필 등록만으로 최적의 파트너를 만나보세요.
+							{t('howItWorks.subtitle')}
 						</p>
 					</div>
 
@@ -281,12 +290,11 @@ export default function Home() {
 									1
 								</div>
 								<h3 className="text-lg font-bold text-foreground">
-									프로필 등록
+									{t('howItWorks.step1Title')}
 								</h3>
 							</div>
 							<p className="text-sm text-muted leading-relaxed">
-								브랜드 또는 인플루언서 프로필을 등록하고 원하는 조건을
-								설정하세요.
+								{t('howItWorks.step1Description')}
 							</p>
 						</div>
 
@@ -297,12 +305,11 @@ export default function Home() {
 									2
 								</div>
 								<h3 className="text-lg font-bold text-foreground">
-									AI 매칭 추천
+									{t('howItWorks.step2Title')}
 								</h3>
 							</div>
 							<p className="text-sm text-muted leading-relaxed">
-								AI가 데이터를 분석하여 가장 적합한 파트너 후보를 추천해
-								드립니다.
+								{t('howItWorks.step2Description')}
 							</p>
 						</div>
 
@@ -313,12 +320,11 @@ export default function Home() {
 									3
 								</div>
 								<h3 className="text-lg font-bold text-foreground">
-									캠페인 시작
+									{t('howItWorks.step3Title')}
 								</h3>
 							</div>
 							<p className="text-sm text-muted leading-relaxed">
-								매칭된 파트너와 바로 캠페인을 시작하고, 진행 상태를 실시간으로
-								확인하세요.
+								{t('howItWorks.step3Description')}
 							</p>
 						</div>
 					</div>
@@ -333,8 +339,7 @@ export default function Home() {
 							FOR EVERYONE
 						</p>
 						<h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-5">
-							브랜드도, 인플루언서도
-							<br className="sm:hidden" /> 모두를 위한 플랫폼
+							{t('forEveryone.title')}
 						</h2>
 					</div>
 
@@ -353,12 +358,19 @@ export default function Home() {
 									strokeLinecap="round"
 									strokeLinejoin="round"
 								>
-									<rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+									<rect
+										x="2"
+										y="7"
+										width="20"
+										height="14"
+										rx="2"
+										ry="2"
+									/>
 									<path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
 								</svg>
 							</div>
 							<h3 className="text-xl font-bold text-foreground mb-3">
-								광고주 · 브랜드
+								{t('forEveryone.brandTitle')}
 							</h3>
 							<ul className="space-y-3">
 								<li className="flex items-start gap-3 text-sm text-muted">
@@ -376,7 +388,7 @@ export default function Home() {
 									>
 										<polyline points="20 6 9 17 4 12" />
 									</svg>
-									AI 기반 동남아시아 인플루언서 자동 추천
+									{t('forEveryone.brandBenefit1')}
 								</li>
 								<li className="flex items-start gap-3 text-sm text-muted">
 									<svg
@@ -393,7 +405,7 @@ export default function Home() {
 									>
 										<polyline points="20 6 9 17 4 12" />
 									</svg>
-									언어 장벽 없는 글로벌 협업
+									{t('forEveryone.brandBenefit2')}
 								</li>
 								<li className="flex items-start gap-3 text-sm text-muted">
 									<svg
@@ -410,7 +422,7 @@ export default function Home() {
 									>
 										<polyline points="20 6 9 17 4 12" />
 									</svg>
-									간편하고 체계적인 캠페인 협업
+									{t('forEveryone.brandBenefit3')}
 								</li>
 							</ul>
 						</div>
@@ -433,7 +445,7 @@ export default function Home() {
 								</svg>
 							</div>
 							<h3 className="text-xl font-bold text-foreground mb-3">
-								인플루언서 · 크리에이터
+								{t('forEveryone.influencerTitle')}
 							</h3>
 							<ul className="space-y-3">
 								<li className="flex items-start gap-3 text-sm text-muted">
@@ -451,7 +463,7 @@ export default function Home() {
 									>
 										<polyline points="20 6 9 17 4 12" />
 									</svg>
-									나의 스타일에 맞는 브랜드 캠페인 매칭
+									{t('forEveryone.influencerBenefit1')}
 								</li>
 								<li className="flex items-start gap-3 text-sm text-muted">
 									<svg
@@ -468,7 +480,7 @@ export default function Home() {
 									>
 										<polyline points="20 6 9 17 4 12" />
 									</svg>
-									언어 걱정 없는 글로벌 캠페인 참여
+									{t('forEveryone.influencerBenefit2')}
 								</li>
 								<li className="flex items-start gap-3 text-sm text-muted">
 									<svg
@@ -485,7 +497,7 @@ export default function Home() {
 									>
 										<polyline points="20 6 9 17 4 12" />
 									</svg>
-									간편한 협업 프로세스
+									{t('forEveryone.influencerBenefit3')}
 								</li>
 							</ul>
 						</div>
@@ -501,28 +513,28 @@ export default function Home() {
 							JOIN WAITLIST
 						</p>
 						<h2 className="text-3xl sm:text-4xl font-bold text-white mb-5">
-							가장 먼저 등록하세요
+							{t('waitlist.title')}
 						</h2>
 						<p className="text-white/50 text-base mx-auto leading-relaxed">
-							웨이팅리스트에 등록하시면
-							<br className="sm:hidden" /> PICKIN 런칭 시 가장 먼저 초대해
-							드립니다.
+							{t('waitlist.description')}
 						</p>
 					</div>
 
 					{/* Beta Benefit Banner */}
 					<div className="max-w-xl mx-auto w-full mb-6 rounded-2xl border border-purple-400/20 bg-white/4 backdrop-blur-sm px-5 py-4 text-center">
 						<p className="text-xs font-semibold tracking-widest uppercase text-purple-300 mb-1">
-							Pre-Launch Beta 혜택
+							{t('waitlist.betaTitle')}
 						</p>
 						<p className="text-sm text-white/70 leading-relaxed">
-							선착순{' '}
-							<span className="text-white font-semibold">10개 브랜드</span> 한정{' '}
-							<br className="sm:hidden" />
-							<span className="text-gradient font-semibold">
-								50만원 상당 매칭 서비스 무료
+							{t('waitlist.betaPrefix')}{' '}
+							<span className="text-white font-semibold">
+								{t('waitlist.betaBrands')}
 							</span>{' '}
-							제공
+							{t('waitlist.betaMiddle')}{' '}
+							<span className="text-gradient font-semibold">
+								{t('waitlist.betaBenefit')}
+							</span>{' '}
+							{t('waitlist.betaSuffix')}
 						</p>
 					</div>
 
@@ -533,14 +545,16 @@ export default function Home() {
 
 					{/* Trust note */}
 					<p className="text-center text-xs text-white/30 mt-6">
-						입력하신 정보는 안전하게 보호되며, 마케팅 용도로만 사용됩니다.
+						{t('waitlist.trustNote')}
 					</p>
 				</div>
 
 				{/* Footer */}
 				<footer className="relative z-10 bg-[#0a0820] py-6 px-6">
 					<div className="max-w-5xl mx-auto text-center">
-						<p className="text-gradient text-lg font-bold mb-2">PICKIN</p>
+						<p className="text-gradient text-lg font-bold mb-2">
+							PICKIN
+						</p>
 						<p className="text-white/30 text-xs">
 							&copy; 2025 PICKIN. All rights reserved.
 						</p>

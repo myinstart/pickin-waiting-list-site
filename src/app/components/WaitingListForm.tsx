@@ -1,10 +1,12 @@
 'use client';
 
 import { useState } from 'react';
+import { useTranslation } from '@/i18n/context';
 
 type Tab = 'advertiser' | 'influencer';
 
 export default function WaitingListForm() {
+	const { t } = useTranslation();
 	const [activeTab, setActiveTab] = useState<Tab>('advertiser');
 	const [submitted, setSubmitted] = useState(false);
 	const [loading, setLoading] = useState(false);
@@ -39,8 +41,7 @@ export default function WaitingListForm() {
 			});
 
 			if (!res.ok) {
-				const data = await res.json();
-				throw new Error(data.error || '등록에 실패했습니다.');
+				throw new Error(t('form.errorFallback'));
 			}
 
 			setSubmitted(true);
@@ -53,7 +54,9 @@ export default function WaitingListForm() {
 			});
 			setTimeout(() => setSubmitted(false), 3000);
 		} catch (err) {
-			setError(err instanceof Error ? err.message : '등록에 실패했습니다.');
+			setError(
+				err instanceof Error ? err.message : t('form.errorFallback')
+			);
 		} finally {
 			setLoading(false);
 		}
@@ -76,7 +79,7 @@ export default function WaitingListForm() {
 							: 'text-white/60 hover:text-white/80'
 					}`}
 				>
-					광고주
+					{t('form.tabAdvertiser')}
 				</button>
 				<button
 					type="button"
@@ -87,7 +90,7 @@ export default function WaitingListForm() {
 							: 'text-white/60 hover:text-white/80'
 					}`}
 				>
-					인플루언서
+					{t('form.tabInfluencer')}
 				</button>
 			</div>
 
@@ -97,21 +100,21 @@ export default function WaitingListForm() {
 					<>
 						<div>
 							<label className="block text-sm font-medium text-white/70 mb-2">
-								브랜드 이름
+								{t('form.brandName')}
 							</label>
 							<input
 								type="text"
 								name="brandName"
 								value={formData.brandName}
 								onChange={handleChange}
-								placeholder="브랜드 이름을 입력해주세요"
+								placeholder={t('form.brandNamePlaceholder')}
 								required
 								className="w-full px-4 py-3.5 rounded-xl bg-white/8 border border-white/15 text-white placeholder-white/30 text-sm transition-all duration-200 focus:bg-white/12"
 							/>
 						</div>
 						<div>
 							<label className="block text-sm font-medium text-white/70 mb-2">
-								이메일 주소
+								{t('form.email')}
 							</label>
 							<input
 								type="email"
@@ -128,35 +131,35 @@ export default function WaitingListForm() {
 					<>
 						<div>
 							<label className="block text-sm font-medium text-white/70 mb-2">
-								이름
+								{t('form.name')}
 							</label>
 							<input
 								type="text"
 								name="name"
 								value={formData.name}
 								onChange={handleChange}
-								placeholder="이름을 입력해주세요"
+								placeholder={t('form.namePlaceholder')}
 								required
 								className="w-full px-4 py-3.5 rounded-xl bg-white/8 border border-white/15 text-white placeholder-white/30 text-sm transition-all duration-200 focus:bg-white/12"
 							/>
 						</div>
 						<div>
 							<label className="block text-sm font-medium text-white/70 mb-2">
-								SNS 계정
+								{t('form.snsAccount')}
 							</label>
 							<input
 								type="text"
 								name="snsAccount"
 								value={formData.snsAccount}
 								onChange={handleChange}
-								placeholder="계정 URL 링크를 넣어주세요"
+								placeholder={t('form.snsPlaceholder')}
 								required
 								className="w-full px-4 py-3.5 rounded-xl bg-white/8 border border-white/15 text-white placeholder-white/30 text-sm transition-all duration-200 focus:bg-white/12"
 							/>
 						</div>
 						<div>
 							<label className="block text-sm font-medium text-white/70 mb-2">
-								이메일 주소
+								{t('form.email')}
 							</label>
 							<input
 								type="email"
@@ -179,21 +182,23 @@ export default function WaitingListForm() {
 				>
 					<span>
 						{loading
-							? '등록 중...'
+							? t('form.submitting')
 							: submitted
-								? '등록 완료!'
-								: '웨이팅리스트 등록하기'}
+								? t('form.submitted')
+								: t('form.submitButton')}
 					</span>
 				</button>
 
 				{submitted && (
 					<p className="text-center text-sm text-green-400 mt-3 animate-fade-in">
-						등록이 완료되었습니다! 빠른 시일 내에 연락드리겠습니다.
+						{t('form.successMessage')}
 					</p>
 				)}
 
 				{error && (
-					<p className="text-center text-sm text-red-400 mt-3">{error}</p>
+					<p className="text-center text-sm text-red-400 mt-3">
+						{error}
+					</p>
 				)}
 			</form>
 		</div>

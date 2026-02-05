@@ -1,0 +1,72 @@
+{
+  "hero": {
+    "badge": "",
+    "subtitle": "",
+    "subtitleHighlight": "",
+    "description1": "",
+    "description2": "",
+    "cta": ""
+  },
+  "whyPickin": {
+    "title": "",
+    "subtitle": "",
+    "card1Title": "",
+    "card1Problem": "",
+    "card1Solution": "",
+    "card2Title": "",
+    "card2Problem": "",
+    "card2Solution": "",
+    "card3Title": "",
+    "card3Problem": "",
+    "card3Solution": ""
+  },
+  "howItWorks": {
+    "title": "",
+    "subtitle": "",
+    "step1Title": "",
+    "step1Description": "",
+    "step2Title": "",
+    "step2Description": "",
+    "step3Title": "",
+    "step3Description": ""
+  },
+  "forEveryone": {
+    "title": "",
+    "brandTitle": "",
+    "brandBenefit1": "",
+    "brandBenefit2": "",
+    "brandBenefit3": "",
+    "influencerTitle": "",
+    "influencerBenefit1": "",
+    "influencerBenefit2": "",
+    "influencerBenefit3": ""
+  },
+  "waitlist": {
+    "title": "",
+    "description1": "",
+    "description2": "",
+    "betaTitle": "",
+    "betaPrefix": "",
+    "betaBrands": "",
+    "betaMiddle": "",
+    "betaBenefit": "",
+    "betaSuffix": "",
+    "trustNote": ""
+  },
+  "form": {
+    "tabAdvertiser": "",
+    "tabInfluencer": "",
+    "brandName": "",
+    "brandNamePlaceholder": "",
+    "email": "",
+    "name": "",
+    "namePlaceholder": "",
+    "snsAccount": "",
+    "snsPlaceholder": "",
+    "submitting": "",
+    "submitted": "",
+    "submitButton": "",
+    "successMessage": "",
+    "errorFallback": ""
+  }
+}
