@@ -7,6 +7,8 @@ type Tab = "advertiser" | "influencer";
 export default function WaitingListForm() {
   const [activeTab, setActiveTab] = useState<Tab>("advertiser");
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
   const [formData, setFormData] = useState({
     brandName: "",
     email: "",
@@ -15,10 +17,46 @@ export default function WaitingListForm() {
     influencerEmail: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
+    setLoading(true);
+    setError("");
+
+    const isAdvertiser = activeTab === "advertiser";
+
+    const body = {
+      name: isAdvertiser ? formData.brandName : formData.name,
+      type: isAdvertiser ? "광고주" : "인플루언서",
+      email: isAdvertiser ? formData.email : formData.influencerEmail,
+      snsAccount: isAdvertiser ? null : formData.snsAccount || null,
+    };
+
+    try {
+      const res = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      });
+
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data.error || "등록에 실패했습니다.");
+      }
+
+      setSubmitted(true);
+      setFormData({
+        brandName: "",
+        email: "",
+        name: "",
+        snsAccount: "",
+        influencerEmail: "",
+      });
+      setTimeout(() => setSubmitted(false), 3000);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "등록에 실패했습니다.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -136,16 +174,27 @@ export default function WaitingListForm() {
         {/* Submit Button */}
         <button
           type="submit"
-          className="btn-gradient w-full py-4 rounded-xl text-white font-semibold text-base mt-6 cursor-pointer"
+          disabled={loading}
+          className="btn-gradient w-full py-4 rounded-xl text-white font-semibold text-base mt-6 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <span>
-            {submitted ? "등록 완료!" : "웨이팅리스트 등록하기"}
+            {loading
+              ? "등록 중..."
+              : submitted
+              ? "등록 완료!"
+              : "웨이팅리스트 등록하기"}
           </span>
         </button>
 
         {submitted && (
           <p className="text-center text-sm text-green-400 mt-3 animate-fade-in">
             감사합니다! 빠른 시일 내에 연락드리겠습니다.
+          </p>
+        )}
+
+        {error && (
+          <p className="text-center text-sm text-red-400 mt-3">
+            {error}
           </p>
         )}
       </form>
