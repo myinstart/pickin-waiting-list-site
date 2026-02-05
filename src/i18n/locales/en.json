@@ -1,72 +1,71 @@
 {
-  "hero": {
-    "badge": "",
-    "subtitle": "",
-    "subtitleHighlight": "",
-    "description1": "",
-    "description2": "",
-    "cta": ""
-  },
-  "whyPickin": {
-    "title": "",
-    "subtitle": "",
-    "card1Title": "",
-    "card1Problem": "",
-    "card1Solution": "",
-    "card2Title": "",
-    "card2Problem": "",
-    "card2Solution": "",
-    "card3Title": "",
-    "card3Problem": "",
-    "card3Solution": ""
-  },
-  "howItWorks": {
-    "title": "",
-    "subtitle": "",
-    "step1Title": "",
-    "step1Description": "",
-    "step2Title": "",
-    "step2Description": "",
-    "step3Title": "",
-    "step3Description": ""
-  },
-  "forEveryone": {
-    "title": "",
-    "brandTitle": "",
-    "brandBenefit1": "",
-    "brandBenefit2": "",
-    "brandBenefit3": "",
-    "influencerTitle": "",
-    "influencerBenefit1": "",
-    "influencerBenefit2": "",
-    "influencerBenefit3": ""
-  },
-  "waitlist": {
-    "title": "",
-    "description1": "",
-    "description2": "",
-    "betaTitle": "",
-    "betaPrefix": "",
-    "betaBrands": "",
-    "betaMiddle": "",
-    "betaBenefit": "",
-    "betaSuffix": "",
-    "trustNote": ""
-  },
-  "form": {
-    "tabAdvertiser": "",
-    "tabInfluencer": "",
-    "brandName": "",
-    "brandNamePlaceholder": "",
-    "email": "",
-    "name": "",
-    "namePlaceholder": "",
-    "snsAccount": "",
-    "snsPlaceholder": "",
-    "submitting": "",
-    "submitted": "",
-    "submitButton": "",
-    "successMessage": "",
-    "errorFallback": ""
-  }
+	"hero": {
+		"badge": "Coming Soon — Pre-registration Open",
+		"subtitle": "Connecting beauty brands and Southeast Asian influencers",
+		"subtitleHighlight": "AI-powered matching platform",
+		"description1": "With data-driven optimal matching, brands meet the right influencers,",
+		"description2": "and influencers discover brands that truly fit them.",
+		"cta": "Join the Waitlist"
+	},
+	"whyPickin": {
+		"title": "Still relying on intuition for global influencer marketing?",
+		"subtitle": "Outdated, inefficient methods no longer drive overseas growth",
+		"card1Title": "Over 2 weeks wasted on searching and matching",
+		"card1Problem": "Finding and comparing overseas influencers consumes excessive time.",
+		"card1Solution": "PICKIN quickly connects you with Southeast Asian influencers through AI recommendations.",
+		"card2Title": "Language barriers that block collaboration",
+		"card2Problem": "Language issues delay collaboration and distort communication.",
+		"card2Solution": "PICKIN enables seamless collaboration with built-in automatic translation.",
+		"card3Title": "Unstructured, criteria-less collaborations",
+		"card3Problem": "Without clear standards, campaign progress becomes hard to track.",
+		"card3Solution": "PICKIN simplifies influencer collaboration with a clear, step-by-step structure."
+	},
+	"howItWorks": {
+		"title": "Smart matching in 3 simple steps",
+		"subtitle": "Meet the right partner with just a simple profile setup.",
+		"step1Title": "Create Your Profile",
+		"step1Description": "Register as a brand or influencer and set your preferred conditions.",
+		"step2Title": "AI Matching Recommendation",
+		"step2Description": "Our AI analyzes data to recommend the most suitable partners.",
+		"step3Title": "Launch Your Campaign",
+		"step3Description": "Start campaigns instantly and track progress in real time."
+	},
+	"forEveryone": {
+		"title": "A platform built for both brands and influencers",
+		"brandTitle": "Advertisers · Brands",
+		"brandBenefit1": "AI-powered Southeast Asian influencer recommendations",
+		"brandBenefit2": "Global collaboration without language barriers",
+		"brandBenefit3": "Simple and structured campaign management",
+		"influencerTitle": "Influencers · Creators",
+		"influencerBenefit1": "Brand campaigns matched to your unique style",
+		"influencerBenefit2": "Join global campaigns without language concerns",
+		"influencerBenefit3": "Easy and intuitive collaboration process"
+	},
+	"waitlist": {
+		"title": "Be the first to join",
+		"description": "Sign up for the waitlist and get early access when PICKIN launches.",
+		"betaTitle": "Pre-Launch Beta Benefits",
+		"betaPrefix": "Limited to",
+		"betaBrands": "10 brands",
+		"betaMiddle": "only",
+		"betaBenefit": "₩500,000 worth of matching services",
+		"betaSuffix": "for free",
+		"trustNote": "Your information is securely protected and used only for marketing purposes."
+	},
+	"form": {
+		"tabAdvertiser": "Advertiser",
+		"tabInfluencer": "Influencer",
+		"brandName": "Brand Name",
+		"brandNamePlaceholder": "Enter your brand name",
+		"email": "Email Address",
+		"name": "Name",
+		"namePlaceholder": "Enter your name",
+		"snsAccount": "SNS Account",
+		"snsPlaceholder": "Paste your account URL",
+		"submitting": "Submitting...",
+		"submitted": "Submitted!",
+		"submitButton": "Join the Waitlist",
+		"successMessage": "Registration complete! We’ll contact you soon.",
+		"errorFallback": "Submission failed."
+	}
 }

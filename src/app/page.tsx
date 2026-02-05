@@ -21,7 +21,7 @@ export default function Home() {
 
 			{/* ===== Section 1: Hero ===== */}
 			<section className="hero-gradient min-h-screen flex items-center justify-center px-6 py-20 snap-section relative">
-				<div className="relative z-10 text-center max-w-2xl mx-auto -mt-16 sm:-mt-20">
+				<div className="relative z-10 text-center max-w-4xl mx-auto -mt-16 sm:-mt-20">
 					{/* Brand Badge */}
 					<div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/8 border border-white/10 mb-8 backdrop-blur-sm">
 						<div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
@@ -44,7 +44,7 @@ export default function Home() {
 						</span>
 					</p>
 
-					<p className="text-sm sm:text-base text-white/40 leading-relaxed mb-10 max-w-md mx-auto">
+					<p className="text-sm sm:text-base text-white/40 leading-relaxed mb-10 max-w-2xl mx-auto">
 						{t('hero.description1')}
 						<br />
 						{t('hero.description2')}
@@ -161,7 +161,7 @@ export default function Home() {
 
 			{/* ===== Section 2: Problem & Value ===== */}
 			<section className="section-gradient py-20 sm:py-28 px-6 snap-section">
-				<div className="max-w-4xl mx-auto">
+				<div className="max-w-5xl mx-auto">
 					<div className="text-center mb-14">
 						<p className="text-sm font-semibold text-primary tracking-widest uppercase mb-3">
 							WHY PICKIN
@@ -169,7 +169,7 @@ export default function Home() {
 						<h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-5">
 							{t('whyPickin.title')}
 						</h2>
-						<p className="text-muted text-base sm:text-lg max-w-xl mx-auto leading-relaxed">
+						<p className="text-muted text-base sm:text-lg max-w-3xl mx-auto leading-relaxed">
 							{t('whyPickin.subtitle')}
 						</p>
 					</div>
@@ -269,7 +269,7 @@ export default function Home() {
 
 			{/* ===== Section 3: How It Works ===== */}
 			<section className="section-gradient-alt py-20 sm:py-28 px-6 snap-section">
-				<div className="max-w-4xl mx-auto">
+				<div className="max-w-5xl mx-auto">
 					<div className="text-center mb-14">
 						<p className="text-sm font-semibold text-primary tracking-widest uppercase mb-3">
 							HOW IT WORKS
@@ -277,7 +277,7 @@ export default function Home() {
 						<h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-5">
 							{t('howItWorks.title')}
 						</h2>
-						<p className="text-muted text-base sm:text-lg max-w-xl mx-auto leading-relaxed">
+						<p className="text-muted text-base sm:text-lg max-w-3xl mx-auto leading-relaxed">
 							{t('howItWorks.subtitle')}
 						</p>
 					</div>
@@ -333,7 +333,7 @@ export default function Home() {
 
 			{/* ===== Section 4: For Both Sides ===== */}
 			<section className="section-gradient py-20 sm:py-28 px-6 snap-section">
-				<div className="max-w-4xl mx-auto">
+				<div className="max-w-5xl mx-auto">
 					<div className="text-center mb-14">
 						<p className="text-sm font-semibold text-primary tracking-widest uppercase mb-3">
 							FOR EVERYONE
@@ -521,7 +521,7 @@ export default function Home() {
 					</div>
 
 					{/* Beta Benefit Banner */}
-					<div className="max-w-xl mx-auto w-full mb-6 rounded-2xl border border-purple-400/20 bg-white/4 backdrop-blur-sm px-5 py-4 text-center">
+					<div className="max-w-2xl mx-auto w-full mb-6 rounded-2xl border border-purple-400/20 bg-white/4 backdrop-blur-sm px-5 py-4 text-center">
 						<p className="text-xs font-semibold tracking-widest uppercase text-purple-300 mb-1">
 							{t('waitlist.betaTitle')}
 						</p>
@@ -539,7 +539,7 @@ export default function Home() {
 					</div>
 
 					{/* Form Container */}
-					<div className="glass-card rounded-3xl p-6 sm:p-6 max-w-xl mx-auto w-full">
+					<div className="glass-card rounded-3xl p-6 sm:p-6 max-w-2xl mx-auto w-full">
 						<WaitingListForm />
 					</div>
 

@@ -1,72 +1,71 @@
 {
-  "hero": {
-    "badge": "",
-    "subtitle": "",
-    "subtitleHighlight": "",
-    "description1": "",
-    "description2": "",
-    "cta": ""
-  },
-  "whyPickin": {
-    "title": "",
-    "subtitle": "",
-    "card1Title": "",
-    "card1Problem": "",
-    "card1Solution": "",
-    "card2Title": "",
-    "card2Problem": "",
-    "card2Solution": "",
-    "card3Title": "",
-    "card3Problem": "",
-    "card3Solution": ""
-  },
-  "howItWorks": {
-    "title": "",
-    "subtitle": "",
-    "step1Title": "",
-    "step1Description": "",
-    "step2Title": "",
-    "step2Description": "",
-    "step3Title": "",
-    "step3Description": ""
-  },
-  "forEveryone": {
-    "title": "",
-    "brandTitle": "",
-    "brandBenefit1": "",
-    "brandBenefit2": "",
-    "brandBenefit3": "",
-    "influencerTitle": "",
-    "influencerBenefit1": "",
-    "influencerBenefit2": "",
-    "influencerBenefit3": ""
-  },
-  "waitlist": {
-    "title": "",
-    "description1": "",
-    "description2": "",
-    "betaTitle": "",
-    "betaPrefix": "",
-    "betaBrands": "",
-    "betaMiddle": "",
-    "betaBenefit": "",
-    "betaSuffix": "",
-    "trustNote": ""
-  },
-  "form": {
-    "tabAdvertiser": "",
-    "tabInfluencer": "",
-    "brandName": "",
-    "brandNamePlaceholder": "",
-    "email": "",
-    "name": "",
-    "namePlaceholder": "",
-    "snsAccount": "",
-    "snsPlaceholder": "",
-    "submitting": "",
-    "submitted": "",
-    "submitButton": "",
-    "successMessage": "",
-    "errorFallback": ""
-  }
+	"hero": {
+		"badge": "Coming Soon — Đang mở đăng ký sớm",
+		"subtitle": "Kết nối thương hiệu làm đẹp với influencer Đông Nam Á",
+		"subtitleHighlight": "Nền tảng ghép nối bằng AI",
+		"description1": "Với ghép nối tối ưu dựa trên dữ liệu, thương hiệu tìm đúng influencer,",
+		"description2": "và influencer gặp được thương hiệu phù hợp với mình.",
+		"cta": "Tham gia danh sách chờ"
+	},
+	"whyPickin": {
+		"title": "Vẫn làm influencer marketing quốc tế theo cảm tính?",
+		"subtitle": "Những cách làm kém hiệu quả không còn tạo ra kết quả toàn cầu",
+		"card1Title": "Mất hơn 2 tuần để tìm kiếm và ghép nối",
+		"card1Problem": "Việc tìm và so sánh influencer quốc tế tốn quá nhiều thời gian.",
+		"card1Solution": "PICKIN kết nối nhanh influencer Đông Nam Á thông qua đề xuất AI.",
+		"card2Title": "Rào cản ngôn ngữ cản trở hợp tác",
+		"card2Problem": "Vấn đề ngôn ngữ gây chậm trễ và sai lệch trong giao tiếp.",
+		"card2Solution": "PICKIN cho phép hợp tác mượt mà với hệ thống dịch tự động.",
+		"card3Title": "Hợp tác thiếu tiêu chí và cấu trúc",
+		"card3Problem": "Không có quy trình rõ ràng khiến việc theo dõi trở nên khó khăn.",
+		"card3Solution": "PICKIN đơn giản hóa hợp tác với cấu trúc từng bước rõ ràng."
+	},
+	"howItWorks": {
+		"title": "Ghép nối thông minh chỉ trong 3 bước",
+		"subtitle": "Chỉ cần đăng ký hồ sơ đơn giản để gặp đúng đối tác.",
+		"step1Title": "Tạo hồ sơ",
+		"step1Description": "Đăng ký với tư cách thương hiệu hoặc influencer và thiết lập điều kiện mong muốn.",
+		"step2Title": "Đề xuất ghép nối bằng AI",
+		"step2Description": "AI phân tích dữ liệu và đề xuất đối tác phù hợp nhất.",
+		"step3Title": "Bắt đầu chiến dịch",
+		"step3Description": "Khởi động chiến dịch ngay và theo dõi tiến độ theo thời gian thực."
+	},
+	"forEveryone": {
+		"title": "Nền tảng dành cho cả thương hiệu và influencer",
+		"brandTitle": "Nhà quảng cáo · Thương hiệu",
+		"brandBenefit1": "Tự động đề xuất influencer Đông Nam Á bằng AI",
+		"brandBenefit2": "Hợp tác toàn cầu không rào cản ngôn ngữ",
+		"brandBenefit3": "Quy trình chiến dịch đơn giản và có hệ thống",
+		"influencerTitle": "Influencer · Creator",
+		"influencerBenefit1": "Ghép nối chiến dịch phù hợp với phong cách của bạn",
+		"influencerBenefit2": "Tham gia chiến dịch quốc tế không lo ngôn ngữ",
+		"influencerBenefit3": "Quy trình hợp tác đơn giản"
+	},
+	"waitlist": {
+		"title": "Đăng ký sớm nhất",
+		"description": "Tham gia danh sách chờ để được mời sớm khi PICKIN ra mắt.",
+		"betaTitle": "Ưu đãi Pre-Launch Beta",
+		"betaPrefix": "Chỉ dành cho",
+		"betaBrands": "10 thương hiệu",
+		"betaMiddle": "giới hạn",
+		"betaBenefit": "Dịch vụ ghép nối trị giá 500.000 KRW",
+		"betaSuffix": "miễn phí",
+		"trustNote": "Thông tin của bạn được bảo mật và chỉ dùng cho mục đích marketing."
+	},
+	"form": {
+		"tabAdvertiser": "Nhà quảng cáo",
+		"tabInfluencer": "Influencer",
+		"brandName": "Tên thương hiệu",
+		"brandNamePlaceholder": "Nhập tên thương hiệu",
+		"email": "Email",
+		"name": "Tên",
+		"namePlaceholder": "Nhập tên của bạn",
+		"snsAccount": "Tài khoản SNS",
+		"snsPlaceholder": "Dán link tài khoản của bạn",
+		"submitting": "Đang gửi...",
+		"submitted": "Hoàn tất!",
+		"submitButton": "Tham gia danh sách chờ",
+		"successMessage": "Đăng ký thành công! Chúng tôi sẽ sớm liên hệ.",
+		"errorFallback": "Đăng ký thất bại."
+	}
 }

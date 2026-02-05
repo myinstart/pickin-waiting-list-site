@@ -1,72 +1,71 @@
 {
-  "hero": {
-    "badge": "",
-    "subtitle": "",
-    "subtitleHighlight": "",
-    "description1": "",
-    "description2": "",
-    "cta": ""
-  },
-  "whyPickin": {
-    "title": "",
-    "subtitle": "",
-    "card1Title": "",
-    "card1Problem": "",
-    "card1Solution": "",
-    "card2Title": "",
-    "card2Problem": "",
-    "card2Solution": "",
-    "card3Title": "",
-    "card3Problem": "",
-    "card3Solution": ""
-  },
-  "howItWorks": {
-    "title": "",
-    "subtitle": "",
-    "step1Title": "",
-    "step1Description": "",
-    "step2Title": "",
-    "step2Description": "",
-    "step3Title": "",
-    "step3Description": ""
-  },
-  "forEveryone": {
-    "title": "",
-    "brandTitle": "",
-    "brandBenefit1": "",
-    "brandBenefit2": "",
-    "brandBenefit3": "",
-    "influencerTitle": "",
-    "influencerBenefit1": "",
-    "influencerBenefit2": "",
-    "influencerBenefit3": ""
-  },
-  "waitlist": {
-    "title": "",
-    "description1": "",
-    "description2": "",
-    "betaTitle": "",
-    "betaPrefix": "",
-    "betaBrands": "",
-    "betaMiddle": "",
-    "betaBenefit": "",
-    "betaSuffix": "",
-    "trustNote": ""
-  },
-  "form": {
-    "tabAdvertiser": "",
-    "tabInfluencer": "",
-    "brandName": "",
-    "brandNamePlaceholder": "",
-    "email": "",
-    "name": "",
-    "namePlaceholder": "",
-    "snsAccount": "",
-    "snsPlaceholder": "",
-    "submitting": "",
-    "submitted": "",
-    "submitButton": "",
-    "successMessage": "",
-    "errorFallback": ""
-  }
+	"hero": {
+		"badge": "即将上线 — 正在开放预注册",
+		"subtitle": "连接美妆品牌与东南亚网红",
+		"subtitleHighlight": "AI 智能匹配平台",
+		"description1": "通过数据驱动的精准匹配，品牌找到最合适的网红，",
+		"description2": "网红也能遇见真正适合自己的品牌。",
+		"cta": "加入等待名单"
+	},
+	"whyPickin": {
+		"title": "海外网红营销还在凭感觉做吗？",
+		"subtitle": "低效的传统方式已无法带来海外增长",
+		"card1Title": "平均耗时 2 周以上的筛选与匹配",
+		"card1Problem": "寻找和对比海外网红耗费大量时间与精力。",
+		"card1Solution": "PICKIN 通过 AI 推荐，快速连接东南亚网红。",
+		"card2Title": "阻碍合作的语言壁垒",
+		"card2Problem": "语言问题导致合作延迟，沟通信息被误解。",
+		"card2Solution": "PICKIN 提供自动翻译环境，实现无语言障碍合作。",
+		"card3Title": "缺乏标准的随意式合作",
+		"card3Problem": "没有清晰流程，难以掌握项目进展。",
+		"card3Solution": "PICKIN 通过清晰的阶段结构，让海外合作更简单。"
+	},
+	"howItWorks": {
+		"title": "3 步开启智能匹配",
+		"subtitle": "只需简单注册，即可找到理想合作伙伴。",
+		"step1Title": "注册资料",
+		"step1Description": "注册品牌或网红资料，并设置合作条件。",
+		"step2Title": "AI 智能推荐",
+		"step2Description": "AI 分析数据，推荐最合适的合作对象。",
+		"step3Title": "启动活动",
+		"step3Description": "立即开始活动，并实时查看进展。"
+	},
+	"forEveryone": {
+		"title": "为品牌与网红共同打造的平台",
+		"brandTitle": "广告主 · 品牌",
+		"brandBenefit1": "AI 自动推荐东南亚网红",
+		"brandBenefit2": "无语言障碍的全球合作",
+		"brandBenefit3": "简单且系统化的活动管理",
+		"influencerTitle": "网红 · 创作者",
+		"influencerBenefit1": "匹配符合个人风格的品牌活动",
+		"influencerBenefit2": "无语言压力参与全球活动",
+		"influencerBenefit3": "轻松高效的合作流程"
+	},
+	"waitlist": {
+		"title": "抢先注册",
+		"description": "加入等待名单，PICKIN 上线时优先获得邀请。",
+		"betaTitle": "Pre-Launch Beta 专属福利",
+		"betaPrefix": "限量",
+		"betaBrands": "10 个品牌",
+		"betaMiddle": "",
+		"betaBenefit": "价值 50 万韩元的匹配服务",
+		"betaSuffix": "免费提供",
+		"trustNote": "您的信息将被安全保护，仅用于营销用途。"
+	},
+	"form": {
+		"tabAdvertiser": "广告主",
+		"tabInfluencer": "网红",
+		"brandName": "品牌名称",
+		"brandNamePlaceholder": "请输入品牌名称",
+		"email": "邮箱地址",
+		"name": "姓名",
+		"namePlaceholder": "请输入姓名",
+		"snsAccount": "社交账号",
+		"snsPlaceholder": "请输入账号链接",
+		"submitting": "提交中...",
+		"submitted": "提交完成！",
+		"submitButton": "加入等待名单",
+		"successMessage": "注册成功！我们将尽快与您联系。",
+		"errorFallback": "注册失败。"
+	}
 }

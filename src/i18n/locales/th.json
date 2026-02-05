@@ -1,72 +1,71 @@
 {
-  "hero": {
-    "badge": "",
-    "subtitle": "",
-    "subtitleHighlight": "",
-    "description1": "",
-    "description2": "",
-    "cta": ""
-  },
-  "whyPickin": {
-    "title": "",
-    "subtitle": "",
-    "card1Title": "",
-    "card1Problem": "",
-    "card1Solution": "",
-    "card2Title": "",
-    "card2Problem": "",
-    "card2Solution": "",
-    "card3Title": "",
-    "card3Problem": "",
-    "card3Solution": ""
-  },
-  "howItWorks": {
-    "title": "",
-    "subtitle": "",
-    "step1Title": "",
-    "step1Description": "",
-    "step2Title": "",
-    "step2Description": "",
-    "step3Title": "",
-    "step3Description": ""
-  },
-  "forEveryone": {
-    "title": "",
-    "brandTitle": "",
-    "brandBenefit1": "",
-    "brandBenefit2": "",
-    "brandBenefit3": "",
-    "influencerTitle": "",
-    "influencerBenefit1": "",
-    "influencerBenefit2": "",
-    "influencerBenefit3": ""
-  },
-  "waitlist": {
-    "title": "",
-    "description1": "",
-    "description2": "",
-    "betaTitle": "",
-    "betaPrefix": "",
-    "betaBrands": "",
-    "betaMiddle": "",
-    "betaBenefit": "",
-    "betaSuffix": "",
-    "trustNote": ""
-  },
-  "form": {
-    "tabAdvertiser": "",
-    "tabInfluencer": "",
-    "brandName": "",
-    "brandNamePlaceholder": "",
-    "email": "",
-    "name": "",
-    "namePlaceholder": "",
-    "snsAccount": "",
-    "snsPlaceholder": "",
-    "submitting": "",
-    "submitted": "",
-    "submitButton": "",
-    "successMessage": "",
-    "errorFallback": ""
-  }
+	"hero": {
+		"badge": "Coming Soon — เปิดรับลงทะเบียนล่วงหน้า",
+		"subtitle": "เชื่อมต่อแบรนด์บิวตี้กับอินฟลูเอนเซอร์ในเอเชียตะวันออกเฉียงใต้",
+		"subtitleHighlight": "แพลตฟอร์มจับคู่ด้วย AI",
+		"description1": "ด้วยการจับคู่ที่ขับเคลื่อนด้วยข้อมูล แบรนด์จะพบอินฟลูเอนเซอร์ที่ใช่",
+		"description2": "และอินฟลูเอนเซอร์จะได้ร่วมงานกับแบรนด์ที่เหมาะกับตนเอง",
+		"cta": "ลงทะเบียน Waiting List"
+	},
+	"whyPickin": {
+		"title": "ยังทำการตลาดอินฟลูเอนเซอร์ต่างประเทศแบบเดาอยู่หรือ?",
+		"subtitle": "วิธีเดิม ๆ ที่ไม่มีประสิทธิภาพไม่สามารถสร้างผลลัพธ์ระดับโลกได้อีกต่อไป",
+		"card1Title": "ใช้เวลากว่า 2 สัปดาห์ในการค้นหาและจับคู่",
+		"card1Problem": "การค้นหาและเปรียบเทียบอินฟลูเอนเซอร์ต่างประเทศใช้เวลามากเกินไป",
+		"card1Solution": "PICKIN ช่วยเชื่อมต่ออินฟลูเอนเซอร์ในเอเชียตะวันออกเฉียงใต้ได้อย่างรวดเร็วด้วย AI",
+		"card2Title": "อุปสรรคด้านภาษาที่ขัดขวางการทำงานร่วมกัน",
+		"card2Problem": "ปัญหาด้านภาษาทำให้การสื่อสารล่าช้าและคลาดเคลื่อน",
+		"card2Solution": "PICKIN ช่วยให้ทำงานร่วมกันได้อย่างไร้รอยต่อด้วยระบบแปลภาษาอัตโนมัติ",
+		"card3Title": "การร่วมงานที่ไร้โครงสร้างและไม่มีมาตรฐาน",
+		"card3Problem": "เมื่อไม่มีขั้นตอนที่ชัดเจน การติดตามความคืบหน้าจะเป็นเรื่องยาก",
+		"card3Solution": "PICKIN ทำให้การร่วมงานกับอินฟลูเอนเซอร์ง่ายขึ้นด้วยขั้นตอนที่ชัดเจน"
+	},
+	"howItWorks": {
+		"title": "เริ่มต้นการจับคู่อัจฉริยะใน 3 ขั้นตอน",
+		"subtitle": "เพียงลงทะเบียนโปรไฟลง่าย ๆ ก็พบพาร์ทเนอร์ที่เหมาะสม",
+		"step1Title": "ลงทะเบียนโปรไฟล์",
+		"step1Description": "สมัครเป็นแบรนด์หรืออินฟลูเอนเซอร์และตั้งค่าเงื่อนไขที่ต้องการ",
+		"step2Title": "แนะนำการจับคู่ด้วย AI",
+		"step2Description": "AI วิเคราะห์ข้อมูลและแนะนำพาร์ทเนอร์ที่เหมาะสมที่สุด",
+		"step3Title": "เริ่มแคมเปญ",
+		"step3Description": "เริ่มแคมเปญได้ทันทีและติดตามผลแบบเรียลไทม์"
+	},
+	"forEveryone": {
+		"title": "แพลตฟอร์มที่ออกแบบมาเพื่อทั้งแบรนด์และอินฟลูเอนเซอร์",
+		"brandTitle": "ผู้ลงโฆษณา · แบรนด์",
+		"brandBenefit1": "แนะนำอินฟลูเอนเซอร์เอเชียตะวันออกเฉียงใต้ด้วย AI",
+		"brandBenefit2": "ทำงานระดับโลกได้โดยไม่มีอุปสรรคด้านภาษา",
+		"brandBenefit3": "บริหารแคมเปญได้ง่ายและเป็นระบบ",
+		"influencerTitle": "อินฟลูเอนเซอร์ · ครีเอเตอร์",
+		"influencerBenefit1": "จับคู่แคมเปญที่เข้ากับสไตล์ของคุณ",
+		"influencerBenefit2": "เข้าร่วมแคมเปญระดับโลกโดยไม่ต้องกังวลเรื่องภาษา",
+		"influencerBenefit3": "กระบวนการทำงานที่ง่ายและชัดเจน"
+	},
+	"waitlist": {
+		"title": "สมัครก่อนใคร",
+		"description": "ลงทะเบียน Waiting List เพื่อรับสิทธิ์ใช้งานก่อนใครเมื่อ PICKIN เปิดตัว",
+		"betaTitle": "สิทธิพิเศษ Pre-Launch Beta",
+		"betaPrefix": "จำกัด",
+		"betaBrands": "10 แบรนด์",
+		"betaMiddle": "เท่านั้น",
+		"betaBenefit": "บริการจับคู่มูลค่า 500,000 วอน",
+		"betaSuffix": "ฟรี",
+		"trustNote": "ข้อมูลของคุณจะถูกเก็บรักษาอย่างปลอดภัยและใช้เพื่อการตลาดเท่านั้น"
+	},
+	"form": {
+		"tabAdvertiser": "ผู้ลงโฆษณา",
+		"tabInfluencer": "อินฟลูเอนเซอร์",
+		"brandName": "ชื่อแบรนด์",
+		"brandNamePlaceholder": "กรอกชื่อแบรนด์",
+		"email": "อีเมล",
+		"name": "ชื่อ",
+		"namePlaceholder": "กรอกชื่อของคุณ",
+		"snsAccount": "บัญชีโซเชียล",
+		"snsPlaceholder": "วางลิงก์บัญชีของคุณ",
+		"submitting": "กำลังส่ง...",
+		"submitted": "ส่งเรียบร้อย!",
+		"submitButton": "ลงทะเบียน Waiting List",
+		"successMessage": "ลงทะเบียนสำเร็จ! เราจะติดต่อกลับเร็ว ๆ นี้",
+		"errorFallback": "การลงทะเบียนล้มเหลว"
+	}
 }
