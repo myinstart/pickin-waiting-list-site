@@ -5,7 +5,7 @@ export default function Home() {
 		<div className="min-h-screen snap-container">
 			{/* ===== Section 1: Hero ===== */}
 			<section className="hero-gradient min-h-screen flex items-center justify-center px-6 py-20 snap-section relative">
-				<div className="relative z-10 text-center max-w-2xl mx-auto">
+				<div className="relative z-10 text-center max-w-2xl mx-auto -mt-16 sm:-mt-20">
 					{/* Brand Badge */}
 					<div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/8 border border-white/10 mb-8 backdrop-blur-sm">
 						<div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
@@ -28,6 +28,7 @@ export default function Home() {
 
 					<p className="text-sm sm:text-base text-white/40 leading-relaxed mb-10 max-w-md mx-auto">
 						데이터 기반 최적의 매칭으로, 브랜드는 딱 맞는 인플루언서를,
+						<br />
 						인플루언서는 나에게 맞는 브랜드를 만나보세요.
 					</p>
 
@@ -182,7 +183,9 @@ export default function Home() {
 								해외 인플루언서 서칭과 비교에 불필요한 시간이 계속 소모됩니다.
 							</p>
 							<p className="text-sm text-primary font-medium leading-relaxed">
-								PICKIN은 AI 추천으로 동남아시아 인플루언서를 빠르게 연결합니다.
+								PICKIN은 AI 추천으로
+								<br />
+								동남아시아 인플루언서를 빠르게 연결합니다.
 							</p>
 						</div>
 
@@ -212,8 +215,9 @@ export default function Home() {
 								언어 문제로 협업이 지연되거나 의사 전달이 왜곡됩니다.
 							</p>
 							<p className="text-sm text-primary font-medium leading-relaxed">
-								PICKIN은 번역 기반 협업 환경으로 언어 장벽 없이 글로벌 협업을
-								가능하게 합니다.
+								PICKIN은 번역 기반 협업 환경으로
+								<br />
+								언어 장벽 없이 글로벌 협업을 가능하게 합니다.
 							</p>
 						</div>
 
@@ -244,8 +248,9 @@ export default function Home() {
 								어렵습니다.
 							</p>
 							<p className="text-sm text-primary font-medium leading-relaxed">
-								PICKIN은 명확한 단계 구조로 해외 인플루언서 협업을 쉽게
-								만듭니다.
+								PICKIN은 명확한 단계 구조로
+								<br />
+								해외 인플루언서 협업을 쉽게 만듭니다.
 							</p>
 						</div>
 					</div>
@@ -312,7 +317,8 @@ export default function Home() {
 								</h3>
 							</div>
 							<p className="text-sm text-muted leading-relaxed">
-								매칭된 파트너와 바로 캠페인을 시작하고 실시간 성과를 확인하세요.
+								매칭된 파트너와 바로 캠페인을 시작하고, 진행 상태를 실시간으로
+								확인하세요.
 							</p>
 						</div>
 					</div>
@@ -487,12 +493,9 @@ export default function Home() {
 				</div>
 			</section>
 
-			{/* ===== Section 5: Waiting List Form ===== */}
-			<section
-				id="waitlist"
-				className="cta-gradient py-20 sm:py-28 px-6 snap-section"
-			>
-				<div className="relative z-10 max-w-4xl mx-auto">
+			{/* ===== Section 5: Waiting List Form + Footer ===== */}
+			<section id="waitlist" className="cta-gradient snap-section pb-0!">
+				<div className="relative z-10 w-full max-w-6xl mx-auto py-20 sm:py-28 px-6 flex-1 flex flex-col justify-center">
 					<div className="text-center mb-12">
 						<p className="text-sm font-semibold text-purple-300 tracking-widest uppercase mb-3">
 							JOIN WAITLIST
@@ -500,14 +503,14 @@ export default function Home() {
 						<h2 className="text-3xl sm:text-4xl font-bold text-white mb-5">
 							지금 바로 시작하세요
 						</h2>
-						<p className="text-white/50 text-base sm:text-lg max-w-md mx-auto leading-relaxed">
+						<p className="text-white/50 text-base max-w-md mx-auto leading-relaxed">
 							웨이팅리스트에 등록하시면 PICKIN 런칭 시 가장 먼저 초대해
 							드립니다.
 						</p>
 					</div>
 
 					{/* Form Container */}
-					<div className="glass-card rounded-3xl p-6 sm:p-10 max-w-lg mx-auto">
+					<div className="glass-card rounded-3xl p-6 sm:p-6 max-w-xl mx-auto w-full">
 						<WaitingListForm />
 					</div>
 
@@ -516,17 +519,17 @@ export default function Home() {
 						입력하신 정보는 안전하게 보호되며, 마케팅 용도로만 사용됩니다.
 					</p>
 				</div>
-			</section>
 
-			{/* ===== Footer ===== */}
-			<footer className="bg-[#0a0820] py-8 px-6 snap-section sm:min-h-0 sm:flex-none!">
-				<div className="max-w-4xl mx-auto text-center">
-					<p className="text-gradient text-lg font-bold mb-2">PICKIN</p>
-					<p className="text-white/30 text-xs">
-						&copy; 2025 PICKIN. All rights reserved.
-					</p>
-				</div>
-			</footer>
+				{/* Footer */}
+				<footer className="relative z-10 bg-[#0a0820] py-6 px-6">
+					<div className="max-w-5xl mx-auto text-center">
+						<p className="text-gradient text-lg font-bold mb-2">PICKIN</p>
+						<p className="text-white/30 text-xs">
+							&copy; 2025 PICKIN. All rights reserved.
+						</p>
+					</div>
+				</footer>
+			</section>
 		</div>
 	);
 }
