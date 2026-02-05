@@ -185,7 +185,7 @@ export default function Home() {
 							<p className="text-sm text-primary font-medium leading-relaxed">
 								PICKIN은 AI 추천으로
 								<br />
-								동남아시아 인플루언서를 빠르게 연결합니다.
+								동남아 인플루언서를 빠르게 연결합니다.
 							</p>
 						</div>
 
@@ -215,9 +215,9 @@ export default function Home() {
 								언어 문제로 협업이 지연되거나 의사 전달이 왜곡됩니다.
 							</p>
 							<p className="text-sm text-primary font-medium leading-relaxed">
-								PICKIN은 번역 기반 협업 환경으로
+								PICKIN은 자동 번역 기반 환경으로
 								<br />
-								언어 장벽 없이 글로벌 협업을 가능하게 합니다.
+								언어 장벽 없이 협업을 가능하게 합니다.
 							</p>
 						</div>
 
@@ -496,16 +496,33 @@ export default function Home() {
 			{/* ===== Section 5: Waiting List Form + Footer ===== */}
 			<section id="waitlist" className="cta-gradient snap-section pb-0!">
 				<div className="relative z-10 w-full max-w-6xl mx-auto py-20 sm:py-28 px-6 flex-1 flex flex-col justify-center">
-					<div className="text-center mb-12">
+					<div className="text-center mb-6">
 						<p className="text-sm font-semibold text-purple-300 tracking-widest uppercase mb-3">
 							JOIN WAITLIST
 						</p>
 						<h2 className="text-3xl sm:text-4xl font-bold text-white mb-5">
-							지금 바로 시작하세요
+							가장 먼저 등록하세요
 						</h2>
-						<p className="text-white/50 text-base max-w-md mx-auto leading-relaxed">
-							웨이팅리스트에 등록하시면 PICKIN 런칭 시 가장 먼저 초대해
+						<p className="text-white/50 text-base mx-auto leading-relaxed">
+							웨이팅리스트에 등록하시면
+							<br className="sm:hidden" /> PICKIN 런칭 시 가장 먼저 초대해
 							드립니다.
+						</p>
+					</div>
+
+					{/* Beta Benefit Banner */}
+					<div className="max-w-xl mx-auto w-full mb-6 rounded-2xl border border-purple-400/20 bg-white/4 backdrop-blur-sm px-5 py-4 text-center">
+						<p className="text-xs font-semibold tracking-widest uppercase text-purple-300 mb-1">
+							Pre-Launch Beta 혜택
+						</p>
+						<p className="text-sm text-white/70 leading-relaxed">
+							선착순{' '}
+							<span className="text-white font-semibold">10개 브랜드</span> 한정{' '}
+							<br className="sm:hidden" />
+							<span className="text-gradient font-semibold">
+								50만원 상당 매칭 서비스 무료
+							</span>{' '}
+							제공
 						</p>
 					</div>
 
