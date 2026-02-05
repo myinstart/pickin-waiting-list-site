@@ -21,9 +21,9 @@ export default function Home() {
 
 					{/* Subtitle */}
 					<p className="text-lg sm:text-xl text-white/60 leading-relaxed mb-4 font-medium">
-						뷰티 브랜드와 인플루언서를 잇는
+						뷰티 브랜드와 동남아 인플루언서를 잇는
 						<br className="sm:hidden" />{' '}
-						<span className="text-white/90">스마트 AI 매칭 플랫폼</span>
+						<span className="text-white/90">AI 기반 매칭 플랫폼</span>
 					</p>
 
 					<p className="text-sm sm:text-base text-white/40 leading-relaxed mb-10 max-w-md mx-auto">
@@ -148,12 +148,11 @@ export default function Home() {
 							WHY PICKIN
 						</p>
 						<h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-5">
-							뷰티 마케팅,
+							해외 인플루언서 마케팅,
 							<br className="sm:hidden" /> 아직도 감으로 하시나요?
 						</h2>
 						<p className="text-muted text-base sm:text-lg max-w-xl mx-auto leading-relaxed">
-							브랜드와 인플루언서 모두가 만족하는 캠페인. PICKIN이 데이터로
-							만들어 드립니다.
+							기존의 비효율적인 방식으로는 해외 성과를 만들 수 없습니다
 						</p>
 					</div>
 
@@ -172,18 +171,18 @@ export default function Home() {
 									strokeLinecap="round"
 									strokeLinejoin="round"
 								>
-									<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-									<circle cx="9" cy="7" r="4" />
-									<path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-									<path d="M16 3.13a4 4 0 0 1 0 7.75" />
+									<circle cx="12" cy="12" r="10" />
+									<polyline points="12 6 12 12 16 14" />
 								</svg>
 							</div>
 							<h3 className="text-lg font-bold text-foreground mb-2">
-								정확한 매칭
+								평균 2주 이상 걸리는 서칭과 매칭
 							</h3>
-							<p className="text-sm text-muted leading-relaxed">
-								브랜드 카테고리, 타겟 고객, 콘텐츠 스타일을 분석하여 최적의
-								파트너를 추천합니다.
+							<p className="text-sm text-muted leading-relaxed mb-4">
+								해외 인플루언서 서칭과 비교에 불필요한 시간이 계속 소모됩니다.
+							</p>
+							<p className="text-sm text-primary font-medium leading-relaxed">
+								PICKIN은 AI 추천으로 동남아시아 인플루언서를 빠르게 연결합니다.
 							</p>
 						</div>
 
@@ -201,16 +200,20 @@ export default function Home() {
 									strokeLinecap="round"
 									strokeLinejoin="round"
 								>
-									<path d="M12 20V10" />
-									<path d="M18 20V4" />
-									<path d="M6 20v-4" />
+									<circle cx="12" cy="12" r="10" />
+									<line x1="2" y1="12" x2="22" y2="12" />
+									<path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
 								</svg>
 							</div>
 							<h3 className="text-lg font-bold text-foreground mb-2">
-								데이터 인사이트
+								협업을 가로막는 언어 장벽
 							</h3>
-							<p className="text-sm text-muted leading-relaxed">
-								실시간 캠페인 성과 분석과 인사이트로 마케팅 효율을 극대화합니다.
+							<p className="text-sm text-muted leading-relaxed mb-4">
+								언어 문제로 협업이 지연되거나 의사 전달이 왜곡됩니다.
+							</p>
+							<p className="text-sm text-primary font-medium leading-relaxed">
+								PICKIN은 번역 기반 협업 환경으로 언어 장벽 없이 글로벌 협업을
+								가능하게 합니다.
 							</p>
 						</div>
 
@@ -228,15 +231,21 @@ export default function Home() {
 									strokeLinecap="round"
 									strokeLinejoin="round"
 								>
-									<path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+									<path d="M12 20V10" />
+									<path d="M18 20V4" />
+									<path d="M6 20v-4" />
 								</svg>
 							</div>
 							<h3 className="text-lg font-bold text-foreground mb-2">
-								빠른 프로세스
+								기준 없는 마구잡이식 협업
 							</h3>
-							<p className="text-sm text-muted leading-relaxed">
-								복잡한 협업 과정을 간소화하여 캠페인 시작까지의 시간을
-								단축합니다.
+							<p className="text-sm text-muted leading-relaxed mb-4">
+								명확한 기준 없이 진행되는 협업은 진행 상황을 파악하기
+								어렵습니다.
+							</p>
+							<p className="text-sm text-primary font-medium leading-relaxed">
+								PICKIN은 명확한 단계 구조로 해외 인플루언서 협업을 쉽게
+								만듭니다.
 							</p>
 						</div>
 					</div>
@@ -361,7 +370,7 @@ export default function Home() {
 									>
 										<polyline points="20 6 9 17 4 12" />
 									</svg>
-									타겟 오디언스에 맞는 인플루언서 자동 추천
+									AI 기반 동남아시아 인플루언서 자동 추천
 								</li>
 								<li className="flex items-start gap-3 text-sm text-muted">
 									<svg
@@ -378,7 +387,7 @@ export default function Home() {
 									>
 										<polyline points="20 6 9 17 4 12" />
 									</svg>
-									캠페인 ROI 실시간 추적 및 리포트
+									언어 장벽 없는 글로벌 협업
 								</li>
 								<li className="flex items-start gap-3 text-sm text-muted">
 									<svg
@@ -395,7 +404,7 @@ export default function Home() {
 									>
 										<polyline points="20 6 9 17 4 12" />
 									</svg>
-									간편한 계약 및 정산 관리
+									간편하고 체계적인 캠페인 협업
 								</li>
 							</ul>
 						</div>
@@ -453,7 +462,7 @@ export default function Home() {
 									>
 										<polyline points="20 6 9 17 4 12" />
 									</svg>
-									공정하고 투명한 보상 시스템
+									언어 걱정 없는 글로벌 캠페인 참여
 								</li>
 								<li className="flex items-start gap-3 text-sm text-muted">
 									<svg
@@ -470,7 +479,7 @@ export default function Home() {
 									>
 										<polyline points="20 6 9 17 4 12" />
 									</svg>
-									콘텐츠 성과 분석 대시보드 제공
+									간편한 협업 프로세스
 								</li>
 							</ul>
 						</div>
