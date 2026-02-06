@@ -5,9 +5,13 @@ import { useTranslation } from '@/i18n/context';
 
 type Tab = 'advertiser' | 'influencer';
 
-export default function WaitingListForm() {
+interface Props {
+	activeTab: Tab;
+	onTabChange: (tab: Tab) => void;
+}
+
+export default function WaitingListForm({ activeTab, onTabChange }: Props) {
 	const { t } = useTranslation();
-	const [activeTab, setActiveTab] = useState<Tab>('advertiser');
 	const [submitted, setSubmitted] = useState(false);
 	const [loading, setLoading] = useState(false);
 	const [error, setError] = useState('');
@@ -72,7 +76,7 @@ export default function WaitingListForm() {
 			<div className="flex bg-white/10 rounded-2xl p-1.5 mb-8 backdrop-blur-sm border border-white/10">
 				<button
 					type="button"
-					onClick={() => setActiveTab('advertiser')}
+					onClick={() => onTabChange('advertiser')}
 					className={`flex-1 py-3 px-4 rounded-xl text-sm font-semibold transition-all duration-300 cursor-pointer ${
 						activeTab === 'advertiser'
 							? 'tab-active'
@@ -83,7 +87,7 @@ export default function WaitingListForm() {
 				</button>
 				<button
 					type="button"
-					onClick={() => setActiveTab('influencer')}
+					onClick={() => onTabChange('influencer')}
 					className={`flex-1 py-3 px-4 rounded-xl text-sm font-semibold transition-all duration-300 cursor-pointer ${
 						activeTab === 'influencer'
 							? 'tab-active'

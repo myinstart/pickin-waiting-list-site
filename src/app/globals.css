@@ -34,6 +34,8 @@
 
 * {
   scroll-behavior: smooth;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 /* Scroll snap - desktop only */

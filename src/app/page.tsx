@@ -1,11 +1,13 @@
 'use client';
 
+import { useState } from 'react';
 import WaitingListForm from './components/WaitingListForm';
 import LanguageSwitcher from './components/LanguageSwitcher';
 import { useTranslation } from '@/i18n/context';
 
 export default function Home() {
 	const { t } = useTranslation();
+	const [betaTab, setBetaTab] = useState<'advertiser' | 'influencer'>('advertiser');
 
 	return (
 		<div className="min-h-screen snap-container">
@@ -31,12 +33,12 @@ export default function Home() {
 					</div>
 
 					{/* Brand Name */}
-					<h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight mb-6">
+					<h1 className="text-4xl sm:text-7xl font-extrabold tracking-tight mb-6">
 						<span className="text-gradient">PICKIN</span>
 					</h1>
 
 					{/* Subtitle */}
-					<p className="text-lg sm:text-xl text-white/60 leading-relaxed mb-4 font-medium">
+					<p className="text-base sm:text-xl text-white/60 leading-relaxed mb-4 font-medium">
 						{t('hero.subtitle')}
 						<br className="sm:hidden" />{' '}
 						<span className="text-white/90">
@@ -166,10 +168,11 @@ export default function Home() {
 						<p className="text-sm font-semibold text-primary tracking-widest uppercase mb-3">
 							WHY PICKIN
 						</p>
-						<h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-5">
-							{t('whyPickin.title')}
+						<h2 className="text-2xl sm:text-4xl font-bold text-foreground mb-5">
+							{t('whyPickin.title1')}
+							<br className="sm:hidden" /> {t('whyPickin.title2')}
 						</h2>
-						<p className="text-muted text-base sm:text-lg max-w-3xl mx-auto leading-relaxed">
+						<p className="text-muted text-sm sm:text-lg max-w-3xl mx-auto leading-relaxed">
 							{t('whyPickin.subtitle')}
 						</p>
 					</div>
@@ -274,10 +277,10 @@ export default function Home() {
 						<p className="text-sm font-semibold text-primary tracking-widest uppercase mb-3">
 							HOW IT WORKS
 						</p>
-						<h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-5">
+						<h2 className="text-2xl sm:text-4xl font-bold text-foreground mb-5">
 							{t('howItWorks.title')}
 						</h2>
-						<p className="text-muted text-base sm:text-lg max-w-3xl mx-auto leading-relaxed">
+						<p className="text-muted text-sm sm:text-lg max-w-3xl mx-auto leading-relaxed">
 							{t('howItWorks.subtitle')}
 						</p>
 					</div>
@@ -338,8 +341,9 @@ export default function Home() {
 						<p className="text-sm font-semibold text-primary tracking-widest uppercase mb-3">
 							FOR EVERYONE
 						</p>
-						<h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-5">
-							{t('forEveryone.title')}
+						<h2 className="text-2xl sm:text-4xl font-bold text-foreground mb-5">
+							{t('forEveryone.title1')}
+							<br className="sm:hidden" /> {t('forEveryone.title2')}
 						</h2>
 					</div>
 
@@ -512,11 +516,12 @@ export default function Home() {
 						<p className="text-sm font-semibold text-purple-300 tracking-widest uppercase mb-3">
 							JOIN WAITLIST
 						</p>
-						<h2 className="text-3xl sm:text-4xl font-bold text-white mb-5">
+						<h2 className="text-2xl sm:text-4xl font-bold text-white mb-5">
 							{t('waitlist.title')}
 						</h2>
 						<p className="text-white/50 text-base mx-auto leading-relaxed">
-							{t('waitlist.description')}
+							{t('waitlist.description1')}
+							<br className="sm:hidden" /> {t('waitlist.description2')}
 						</p>
 					</div>
 
@@ -525,22 +530,38 @@ export default function Home() {
 						<p className="text-xs font-semibold tracking-widest uppercase text-purple-300 mb-1">
 							{t('waitlist.betaTitle')}
 						</p>
-						<p className="text-sm text-white/70 leading-relaxed">
-							{t('waitlist.betaPrefix')}{' '}
-							<span className="text-white font-semibold">
-								{t('waitlist.betaBrands')}
-							</span>{' '}
-							{t('waitlist.betaMiddle')}{' '}
-							<span className="text-gradient font-semibold">
-								{t('waitlist.betaBenefit')}
-							</span>{' '}
-							{t('waitlist.betaSuffix')}
-						</p>
+						{betaTab === 'advertiser' ? (
+							<p className="text-sm text-white/70 leading-relaxed">
+								{t('waitlist.betaPrefix')}{' '}
+								<span className="text-white font-semibold">
+									{t('waitlist.betaBrands')}
+								</span>{' '}
+								{t('waitlist.betaMiddle')}
+								<br className="sm:hidden" />{' '}
+								<span className="text-gradient font-semibold">
+									{t('waitlist.betaBenefit')}
+								</span>{' '}
+								{t('waitlist.betaSuffix')}
+							</p>
+						) : (
+							<p className="text-sm text-white/70 leading-relaxed">
+								{t('waitlist.influencerBetaPrefix')}{' '}
+								<span className="text-white font-semibold">
+									{t('waitlist.influencerBetaCount')}
+								</span>{' '}
+								{t('waitlist.influencerBetaMiddle')}
+								<br className="sm:hidden" />{' '}
+								<span className="text-gradient font-semibold">
+									{t('waitlist.influencerBetaBenefit')}
+								</span>{' '}
+								{t('waitlist.influencerBetaSuffix')}
+							</p>
+						)}
 					</div>
 
 					{/* Form Container */}
 					<div className="glass-card rounded-3xl p-6 sm:p-6 max-w-2xl mx-auto w-full">
-						<WaitingListForm />
+						<WaitingListForm activeTab={betaTab} onTabChange={setBetaTab} />
 					</div>
 
 					{/* Trust note */}

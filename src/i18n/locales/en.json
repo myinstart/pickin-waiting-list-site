@@ -8,7 +8,8 @@
 		"cta": "Join the Waitlist"
 	},
 	"whyPickin": {
-		"title": "Still relying on intuition for global influencer marketing?",
+		"title1": "Still relying on intuition",
+		"title2": "for global influencer marketing?",
 		"subtitle": "Outdated, inefficient methods no longer drive overseas growth",
 		"card1Title": "Over 2 weeks wasted on searching and matching",
 		"card1Problem": "Finding and comparing overseas influencers consumes excessive time.",
@@ -31,7 +32,8 @@
 		"step3Description": "Start campaigns instantly and track progress in real time."
 	},
 	"forEveryone": {
-		"title": "A platform built for both brands and influencers",
+		"title1": "A platform built",
+		"title2": "for both brands and influencers",
 		"brandTitle": "Advertisers · Brands",
 		"brandBenefit1": "AI-powered Southeast Asian influencer recommendations",
 		"brandBenefit2": "Global collaboration without language barriers",
@@ -43,13 +45,19 @@
 	},
 	"waitlist": {
 		"title": "Be the first to join",
-		"description": "Sign up for the waitlist and get early access when PICKIN launches.",
+		"description1": "Sign up for the waitlist and get early access",
+		"description2": "when PICKIN launches.",
 		"betaTitle": "Pre-Launch Beta Benefits",
 		"betaPrefix": "Limited to",
 		"betaBrands": "10 brands",
 		"betaMiddle": "only",
 		"betaBenefit": "₩500,000 worth of matching services",
 		"betaSuffix": "for free",
+		"influencerBetaPrefix": "Limited to",
+		"influencerBetaCount": "10 influencers",
+		"influencerBetaMiddle": "only",
+		"influencerBetaBenefit": "Priority matching with K-Beauty brands",
+		"influencerBetaSuffix": "offered",
 		"trustNote": "Your information is securely protected and used only for marketing purposes."
 	},
 	"form": {

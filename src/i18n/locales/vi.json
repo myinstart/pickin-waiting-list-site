@@ -8,7 +8,8 @@
 		"cta": "Tham gia danh sách chờ"
 	},
 	"whyPickin": {
-		"title": "Vẫn làm influencer marketing quốc tế theo cảm tính?",
+		"title1": "Vẫn làm influencer marketing quốc tế",
+		"title2": "theo cảm tính?",
 		"subtitle": "Những cách làm kém hiệu quả không còn tạo ra kết quả toàn cầu",
 		"card1Title": "Mất hơn 2 tuần để tìm kiếm và ghép nối",
 		"card1Problem": "Việc tìm và so sánh influencer quốc tế tốn quá nhiều thời gian.",
@@ -31,7 +32,8 @@
 		"step3Description": "Khởi động chiến dịch ngay và theo dõi tiến độ theo thời gian thực."
 	},
 	"forEveryone": {
-		"title": "Nền tảng dành cho cả thương hiệu và influencer",
+		"title1": "Nền tảng dành cho",
+		"title2": "cả thương hiệu và influencer",
 		"brandTitle": "Nhà quảng cáo · Thương hiệu",
 		"brandBenefit1": "Tự động đề xuất influencer Đông Nam Á bằng AI",
 		"brandBenefit2": "Hợp tác toàn cầu không rào cản ngôn ngữ",
@@ -43,13 +45,19 @@
 	},
 	"waitlist": {
 		"title": "Đăng ký sớm nhất",
-		"description": "Tham gia danh sách chờ để được mời sớm khi PICKIN ra mắt.",
+		"description1": "Tham gia danh sách chờ để được mời sớm",
+		"description2": "khi PICKIN ra mắt.",
 		"betaTitle": "Ưu đãi Pre-Launch Beta",
 		"betaPrefix": "Chỉ dành cho",
 		"betaBrands": "10 thương hiệu",
 		"betaMiddle": "giới hạn",
 		"betaBenefit": "Dịch vụ ghép nối trị giá 500.000 KRW",
 		"betaSuffix": "miễn phí",
+		"influencerBetaPrefix": "Chỉ dành cho",
+		"influencerBetaCount": "10 influencer",
+		"influencerBetaMiddle": "giới hạn",
+		"influencerBetaBenefit": "Ưu tiên ghép nối với thương hiệu K-Beauty",
+		"influencerBetaSuffix": "",
 		"trustNote": "Thông tin của bạn được bảo mật và chỉ dùng cho mục đích marketing."
 	},
 	"form": {
