@@ -60,6 +60,9 @@
 		"influencerBetaSuffix": "",
 		"trustNote": "您的信息将被安全保护，仅用于营销用途。"
 	},
+	"footer": {
+		"contactEmail": "联系邮箱"
+	},
 	"form": {
 		"tabAdvertiser": "广告主",
 		"tabInfluencer": "网红",

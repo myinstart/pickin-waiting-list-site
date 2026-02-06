@@ -60,6 +60,9 @@
 		"influencerBetaSuffix": "offered",
 		"trustNote": "Your information is securely protected and used only for marketing purposes."
 	},
+	"footer": {
+		"contactEmail": "Contact"
+	},
 	"form": {
 		"tabAdvertiser": "Advertiser",
 		"tabInfluencer": "Influencer",

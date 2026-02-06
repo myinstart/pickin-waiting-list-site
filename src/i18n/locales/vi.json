@@ -60,6 +60,9 @@
 		"influencerBetaSuffix": "",
 		"trustNote": "Thông tin của bạn được bảo mật và chỉ dùng cho mục đích marketing."
 	},
+	"footer": {
+		"contactEmail": "Email liên hệ"
+	},
 	"form": {
 		"tabAdvertiser": "Nhà quảng cáo",
 		"tabInfluencer": "Influencer",

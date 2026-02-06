@@ -60,6 +60,9 @@
 		"influencerBetaSuffix": "",
 		"trustNote": "ข้อมูลของคุณจะถูกเก็บรักษาอย่างปลอดภัยและใช้เพื่อการตลาดเท่านั้น"
 	},
+	"footer": {
+		"contactEmail": "อีเมลติดต่อ"
+	},
 	"form": {
 		"tabAdvertiser": "ผู้ลงโฆษณา",
 		"tabInfluencer": "อินฟลูเอนเซอร์",

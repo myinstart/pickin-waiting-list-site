@@ -509,8 +509,8 @@ export default function Home() {
 				</div>
 			</section>
 
-			{/* ===== Section 5: Waiting List Form + Footer ===== */}
-			<section id="waitlist" className="cta-gradient snap-section pb-0!">
+			{/* ===== Section 5: Waiting List Form ===== */}
+			<section id="waitlist" className="cta-gradient snap-section min-h-screen flex flex-col justify-center">
 				<div className="relative z-10 w-full max-w-6xl mx-auto py-20 sm:py-28 px-6 flex-1 flex flex-col justify-center">
 					<div className="text-center mb-6">
 						<p className="text-sm font-semibold text-purple-300 tracking-widest uppercase mb-3">
@@ -569,19 +569,28 @@ export default function Home() {
 						{t('waitlist.trustNote')}
 					</p>
 				</div>
-
-				{/* Footer */}
-				<footer className="relative z-10 bg-[#0a0820] py-6 px-6">
-					<div className="max-w-5xl mx-auto text-center">
-						<p className="text-gradient text-lg font-bold mb-2">
-							PICKIN
-						</p>
-						<p className="text-white/30 text-xs">
-							&copy; 2025 PICKIN. All rights reserved.
-						</p>
-					</div>
-				</footer>
 			</section>
+
+			{/* ===== Footer ===== */}
+			<footer className="bg-[#0a0820] py-8 px-6 sm:snap-start">
+				<div className="max-w-5xl mx-auto text-center">
+					<p className="text-gradient text-lg font-bold mb-2">
+						PICKIN
+					</p>
+					<p className="text-white/50 text-sm">
+						{t('footer.contactEmail')}:{' '}
+						<a
+							href="mailto:myin@myin-biz.com"
+							className="hover:text-white/70 transition-colors"
+						>
+							myin@myin-biz.com
+						</a>
+					</p>
+					<p className="text-white/30 text-xs mt-3">
+						&copy; 2025 PICKIN. All rights reserved.
+					</p>
+				</div>
+			</footer>
 		</div>
 	);
 }
