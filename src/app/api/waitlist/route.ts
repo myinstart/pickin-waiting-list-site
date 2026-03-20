@@ -9,7 +9,7 @@ const databaseId = process.env.NOTION_DATABASE_ID!;
 
 export async function POST(request: Request) {
   try {
-    const { name, type, email, snsAccount } = await request.json();
+    const { name, type, email, snsAccount, country } = await request.json();
 
     if (!name || !type || !email) {
       return NextResponse.json(
@@ -37,6 +37,11 @@ export async function POST(request: Request) {
         "SNS 계정": {
           url: snsAccount || null,
         },
+        ...(country && {
+          국가: {
+            select: { name: country },
+          },
+        }),
       },
     });
 
