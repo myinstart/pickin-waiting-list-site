@@ -34,6 +34,7 @@
 	"forEveryone": {
 		"title1": "为品牌与网红",
 		"title2": "共同打造的平台",
+		"subtitle": "品牌与网红都能轻松开启全球合作，无需担心语言障碍。",
 		"brandTitle": "广告主 · 品牌",
 		"brandBenefit1": "AI 自动推荐东南亚网红",
 		"brandBenefit2": "无语言障碍的全球合作",
@@ -42,6 +43,16 @@
 		"influencerBenefit1": "匹配符合个人风格的品牌活动",
 		"influencerBenefit2": "无语言压力参与全球活动",
 		"influencerBenefit3": "轻松高效的合作流程"
+	},
+	"betaInfo": {
+		"title": "为什么现在注册很重要",
+		"subtitle": "PICKIN 计划于 4 月开启 Beta 测试。现在加入等待名单，率先获得参与机会。",
+		"item1Title": "4 月 Beta 测试正式开启",
+		"item1Desc": "等待名单成员将最先收到 Beta 邀请。4 月开放时，比所有人更早体验 PICKIN。",
+		"item2Title": "Beta 期间全面免费",
+		"item2Desc": "Beta 参与者可完全免费使用平台所有功能。无需任何费用，从第一天起就享受完整体验。",
+		"item3Title": "正式上线后同样享有优先权",
+		"item3Desc": "正式上线时，我们将最先联系 Beta 参与者，并持续提供新功能抢先体验及专属高级权益。"
 	},
 	"waitlist": {
 		"title": "抢先注册",

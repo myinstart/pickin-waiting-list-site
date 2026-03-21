@@ -34,6 +34,7 @@
 	"forEveryone": {
 		"title1": "Nền tảng dành cho",
 		"title2": "cả thương hiệu và influencer",
+		"subtitle": "Thương hiệu và influencer có thể bắt đầu hợp tác toàn cầu — không rào cản ngôn ngữ.",
 		"brandTitle": "Nhà quảng cáo · Thương hiệu",
 		"brandBenefit1": "Tự động đề xuất influencer Đông Nam Á bằng AI",
 		"brandBenefit2": "Hợp tác toàn cầu không rào cản ngôn ngữ",
@@ -42,6 +43,16 @@
 		"influencerBenefit1": "Ghép nối chiến dịch phù hợp với phong cách của bạn",
 		"influencerBenefit2": "Tham gia chiến dịch quốc tế không lo ngôn ngữ",
 		"influencerBenefit3": "Quy trình hợp tác đơn giản"
+	},
+	"betaInfo": {
+		"title": "Lý do đăng ký danh sách chờ ngay bây giờ",
+		"subtitle": "PICKIN mở beta vào tháng 4. Đăng ký ngay để nhận cơ hội tham gia đầu tiên.",
+		"item1Title": "Beta mở vào tháng 4",
+		"item1Desc": "Thành viên danh sách chờ sẽ nhận lời mời tham gia beta đầu tiên khi PICKIN mở vào tháng 4.",
+		"item2Title": "Miễn phí toàn bộ trong giai đoạn beta",
+		"item2Desc": "Người tham gia beta được dùng toàn bộ tính năng hoàn toàn miễn phí. Trải nghiệm PICKIN đầy đủ ngay từ ngày đầu.",
+		"item3Title": "Ưu tiên tiếp tục khi ra mắt chính thức",
+		"item3Desc": "Khi PICKIN ra mắt chính thức, thành viên beta sẽ được liên hệ đầu tiên và tiếp tục nhận ưu đãi đặc biệt."
 	},
 	"waitlist": {
 		"title": "Đăng ký sớm nhất",

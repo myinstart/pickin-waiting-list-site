@@ -34,6 +34,7 @@
 	"forEveryone": {
 		"title1": "A platform built",
 		"title2": "for both brands and influencers",
+		"subtitle": "Brands and influencers can start global collaborations — no language barriers, no hassle.",
 		"brandTitle": "Advertisers · Brands",
 		"brandBenefit1": "AI-powered Southeast Asian influencer recommendations",
 		"brandBenefit2": "Global collaboration without language barriers",
@@ -42,6 +43,16 @@
 		"influencerBenefit1": "Brand campaigns matched to your unique style",
 		"influencerBenefit2": "Join global campaigns without language concerns",
 		"influencerBenefit3": "Easy and intuitive collaboration process"
+	},
+	"betaInfo": {
+		"title": "Why joining the waitlist matters",
+		"subtitle": "Beta launches in April. Join the waitlist and be first in.",
+		"item1Title": "Beta Test Launches in April",
+		"item1Desc": "Waitlist members will be the first to receive beta access when PICKIN opens in April. Be among the very first to experience it.",
+		"item2Title": "Free Access During Beta",
+		"item2Desc": "Beta participants can use all platform features completely free. No cost, no commitment — just the full PICKIN experience from day one.",
+		"item3Title": "Priority at Official Launch Too",
+		"item3Desc": "Beta participants will be the first we reach out to at official launch, with continued priority access to new features and premium perks."
 	},
 	"waitlist": {
 		"title": "Be the first to join",
