@@ -3,40 +3,30 @@
 import { useState, useRef, useEffect } from 'react';
 import { useTranslation } from '@/i18n/context';
 
-type Tab = 'advertiser' | 'influencer';
-
-interface Props {
-	activeTab: Tab;
-	onTabChange: (tab: Tab) => void;
-}
-
 const COUNTRIES = [
-	{ code: 'KR', name: '🇰🇷 South Korea' },
 	{ code: 'TH', name: '🇹🇭 Thailand' },
 	{ code: 'VN', name: '🇻🇳 Vietnam' },
+	{ code: 'SG', name: '🇸🇬 Singapore' },
 	{ code: 'ID', name: '🇮🇩 Indonesia' },
 	{ code: 'MY', name: '🇲🇾 Malaysia' },
 	{ code: 'PH', name: '🇵🇭 Philippines' },
-	{ code: 'SG', name: '🇸🇬 Singapore' },
-	{ code: 'MM', name: '🇲🇲 Myanmar' },
-	{ code: 'KH', name: '🇰🇭 Cambodia' },
-	{ code: 'LA', name: '🇱🇦 Laos' },
-	{ code: 'BN', name: '🇧🇳 Brunei' },
-	{ code: 'TL', name: '🇹🇱 Timor-Leste' },
-	{ code: 'OTHER', name: '🌍 기타 (Other)' },
+	{ code: 'OTHER', name: '🌍 Other' },
 ];
 
-export default function WaitingListForm({ activeTab, onTabChange }: Props) {
+const PLATFORMS = ['Instagram', 'TikTok', 'YouTube', 'Other'] as const;
+const FOLLOWER_RANGES = ['Nano (1K – 10K)', 'Micro (10K – 100K)', 'Mid (100K+)'] as const;
+
+export default function WaitingListForm() {
 	const { t } = useTranslation();
 	const [submitted, setSubmitted] = useState(false);
 	const [loading, setLoading] = useState(false);
 	const [error, setError] = useState('');
 	const [formData, setFormData] = useState({
-		brandName: '',
-		email: '',
 		name: '',
 		snsAccount: '',
-		influencerEmail: '',
+		platform: '',
+		followerRange: '',
+		email: '',
 		country: '',
 	});
 	const [countryOpen, setCountryOpen] = useState(false);
@@ -71,13 +61,13 @@ export default function WaitingListForm({ activeTab, onTabChange }: Props) {
 		setLoading(true);
 		setError('');
 
-		const isAdvertiser = activeTab === 'advertiser';
-
 		const body = {
-			name: isAdvertiser ? formData.brandName : formData.name,
-			type: isAdvertiser ? '광고주' : '인플루언서',
-			email: isAdvertiser ? formData.email : formData.influencerEmail,
-			snsAccount: isAdvertiser ? null : formData.snsAccount || null,
+			name: formData.name,
+			type: '인플루언서',
+			email: formData.email,
+			snsAccount: formData.snsAccount || null,
+			platform: formData.platform || null,
+			followerRange: formData.followerRange || null,
 			country: selectedCountry ? selectedCountry.name.replace(/^\S+\s/, '') : null,
 		};
 
@@ -94,11 +84,11 @@ export default function WaitingListForm({ activeTab, onTabChange }: Props) {
 
 			setSubmitted(true);
 			setFormData({
-				brandName: '',
-				email: '',
 				name: '',
 				snsAccount: '',
-				influencerEmail: '',
+				platform: '',
+				followerRange: '',
+				email: '',
 				country: '',
 			});
 			setTimeout(() => setSubmitted(false), 3000);
@@ -115,113 +105,110 @@ export default function WaitingListForm({ activeTab, onTabChange }: Props) {
 		setFormData({ ...formData, [e.target.name]: e.target.value });
 	};
 
+	const inputClass = "w-full px-4 py-3.5 rounded-xl bg-white/8 border border-white/15 text-white placeholder-white/30 text-sm transition-all duration-200 focus:bg-white/12";
+
 	return (
 		<div className="w-full max-w-lg mx-auto">
-			{/* Tabs */}
-			<div className="flex bg-white/10 rounded-2xl p-1.5 mb-8 backdrop-blur-sm border border-white/10">
-				<button
-					type="button"
-					onClick={() => onTabChange('advertiser')}
-					className={`flex-1 py-3 px-4 rounded-xl text-sm font-semibold transition-all duration-300 cursor-pointer ${
-						activeTab === 'advertiser'
-							? 'tab-active'
-							: 'text-white/60 hover:text-white/80'
-					}`}
-				>
-					{t('form.tabAdvertiser')}
-				</button>
-				<button
-					type="button"
-					onClick={() => onTabChange('influencer')}
-					className={`flex-1 py-3 px-4 rounded-xl text-sm font-semibold transition-all duration-300 cursor-pointer ${
-						activeTab === 'influencer'
-							? 'tab-active'
-							: 'text-white/60 hover:text-white/80'
-					}`}
-				>
-					{t('form.tabInfluencer')}
-				</button>
-			</div>
-
-			{/* Form */}
 			<form onSubmit={handleSubmit} className="space-y-4">
-				{activeTab === 'advertiser' ? (
-					<>
-						<div>
-							<label className="block text-sm font-medium text-white/70 mb-2">
-								{t('form.brandName')}
-							</label>
-							<input
-								type="text"
-								name="brandName"
-								value={formData.brandName}
-								onChange={handleChange}
-								placeholder={t('form.brandNamePlaceholder')}
-								required
-								className="w-full px-4 py-3.5 rounded-xl bg-white/8 border border-white/15 text-white placeholder-white/30 text-sm transition-all duration-200 focus:bg-white/12"
-							/>
-						</div>
-						<div>
-							<label className="block text-sm font-medium text-white/70 mb-2">
-								{t('form.email')}
-							</label>
-							<input
-								type="email"
-								name="email"
-								value={formData.email}
-								onChange={handleChange}
-								placeholder="example@brand.com"
-								required
-								className="w-full px-4 py-3.5 rounded-xl bg-white/8 border border-white/15 text-white placeholder-white/30 text-sm transition-all duration-200 focus:bg-white/12"
-							/>
-						</div>
-					</>
-				) : (
-					<>
-						<div>
-							<label className="block text-sm font-medium text-white/70 mb-2">
-								{t('form.name')}
-							</label>
-							<input
-								type="text"
-								name="name"
-								value={formData.name}
-								onChange={handleChange}
-								placeholder={t('form.namePlaceholder')}
-								required
-								className="w-full px-4 py-3.5 rounded-xl bg-white/8 border border-white/15 text-white placeholder-white/30 text-sm transition-all duration-200 focus:bg-white/12"
-							/>
-						</div>
-						<div>
-							<label className="block text-sm font-medium text-white/70 mb-2">
-								{t('form.snsAccount')}
-							</label>
-							<input
-								type="text"
-								name="snsAccount"
-								value={formData.snsAccount}
-								onChange={handleChange}
-								placeholder={t('form.snsPlaceholder')}
-								required
-								className="w-full px-4 py-3.5 rounded-xl bg-white/8 border border-white/15 text-white placeholder-white/30 text-sm transition-all duration-200 focus:bg-white/12"
-							/>
-						</div>
-						<div>
-							<label className="block text-sm font-medium text-white/70 mb-2">
-								{t('form.email')}
-							</label>
-							<input
-								type="email"
-								name="influencerEmail"
-								value={formData.influencerEmail}
-								onChange={handleChange}
-								placeholder="example@email.com"
-								required
-								className="w-full px-4 py-3.5 rounded-xl bg-white/8 border border-white/15 text-white placeholder-white/30 text-sm transition-all duration-200 focus:bg-white/12"
-							/>
-						</div>
-					</>
-				)}
+				{/* Name */}
+				<div>
+					<label className="block text-sm font-medium text-white/70 mb-2">
+						{t('form.name')}
+					</label>
+					<input
+						type="text"
+						name="name"
+						value={formData.name}
+						onChange={handleChange}
+						placeholder={t('form.namePlaceholder')}
+						required
+						className={inputClass}
+					/>
+				</div>
+
+				{/* SNS Account */}
+				<div>
+					<label className="block text-sm font-medium text-white/70 mb-2">
+						{t('form.snsAccount')}
+					</label>
+					<input
+						type="text"
+						name="snsAccount"
+						value={formData.snsAccount}
+						onChange={handleChange}
+						placeholder={t('form.snsPlaceholder')}
+						required
+						className={inputClass}
+					/>
+				</div>
+
+				{/* Platform */}
+				<div>
+					<label className="block text-sm font-medium text-white/70 mb-2">
+						{t('form.platform')}
+					</label>
+					<div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
+						{PLATFORMS.map((p) => (
+							<button
+								key={p}
+								type="button"
+								onClick={() => setFormData({ ...formData, platform: p })}
+								className={`py-2.5 px-3 rounded-xl text-sm font-medium transition-all duration-200 cursor-pointer ${
+									formData.platform === p
+										? 'tab-active'
+										: 'bg-white/8 border border-white/15 text-white/60 hover:text-white/80 hover:bg-white/12'
+								}`}
+							>
+								{p === 'Other' ? t('form.platformOther') : p}
+							</button>
+						))}
+					</div>
+				</div>
+
+				{/* Follower Range */}
+				<div>
+					<label className="block text-sm font-medium text-white/70 mb-2">
+						{t('form.followerRange')}
+					</label>
+					<div className="grid grid-cols-1 gap-2 sm:grid-cols-3">
+						{FOLLOWER_RANGES.map((r) => {
+							const label =
+								r === 'Nano (1K – 10K)' ? t('form.followerNano') :
+								r === 'Micro (10K – 100K)' ? t('form.followerMicro') :
+								t('form.followerMid');
+							return (
+								<button
+									key={r}
+									type="button"
+									onClick={() => setFormData({ ...formData, followerRange: r })}
+									className={`py-2.5 px-3 rounded-xl text-sm font-medium transition-all duration-200 cursor-pointer ${
+										formData.followerRange === r
+											? 'tab-active'
+											: 'bg-white/8 border border-white/15 text-white/60 hover:text-white/80 hover:bg-white/12'
+									}`}
+								>
+									{label}
+								</button>
+							);
+						})}
+					</div>
+				</div>
+
+				{/* Email */}
+				<div>
+					<label className="block text-sm font-medium text-white/70 mb-2">
+						{t('form.email')}
+					</label>
+					<input
+						type="email"
+						name="email"
+						value={formData.email}
+						onChange={handleChange}
+						placeholder="example@email.com"
+						required
+						className={inputClass}
+					/>
+				</div>
 
 				{/* Country Select */}
 				<div ref={countryRef} className="relative">
@@ -254,7 +241,6 @@ export default function WaitingListForm({ activeTab, onTabChange }: Props) {
 
 					{countryOpen && (
 						<div className="absolute z-50 mt-1 w-full rounded-xl bg-[#1a1a2e] border border-white/15 shadow-xl overflow-hidden">
-							{/* Search Input */}
 							<div className="p-2 border-b border-white/10">
 								<input
 									type="text"
@@ -265,7 +251,6 @@ export default function WaitingListForm({ activeTab, onTabChange }: Props) {
 									className="w-full px-3 py-2 rounded-lg bg-white/8 border border-white/10 text-white placeholder-white/30 text-sm outline-none"
 								/>
 							</div>
-							{/* Country List */}
 							<ul className="max-h-48 overflow-y-auto py-1">
 								{filteredCountries.length > 0 ? (
 									filteredCountries.map((c) => (

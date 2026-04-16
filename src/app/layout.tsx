@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PICKIN - 뷰티 인플루언서 매칭 플랫폼",
+  title: "PICKIN - 동남아 인플루언서 브랜드 매칭",
   description:
-    "브랜드와 인플루언서를 연결하는 새로운 뷰티 마케팅 플랫폼, PICKIN. 지금 웨이팅리스트에 등록하세요.",
+    "동남아시아 나노·마이크로 인플루언서를 위한 브랜드 매칭 플랫폼, PICKIN. 팔로워 1,000명부터 가능. Cold DM 없이 브랜드가 먼저 연락합니다. 지금 웨이팅리스트에 등록하세요.",
 };
 
 export default function RootLayout({

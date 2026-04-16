@@ -1,13 +1,11 @@
 'use client';
 
-import { useState } from 'react';
 import WaitingListForm from './components/WaitingListForm';
 import LanguageSwitcher from './components/LanguageSwitcher';
 import { useTranslation } from '@/i18n/context';
 
 export default function Home() {
 	const { t } = useTranslation();
-	const [betaTab, setBetaTab] = useState<'advertiser' | 'influencer'>('advertiser');
 
 	return (
 		<div className="min-h-screen snap-container">
@@ -37,11 +35,12 @@ export default function Home() {
 						<span className="text-gradient">PICKIN</span>
 					</h1>
 
-					{/* Subtitle */}
-					<p className="text-base sm:text-xl text-white/60 leading-relaxed mb-4 font-medium">
+					{/* Headline */}
+					<p className="text-xl sm:text-3xl text-white/80 leading-snug mb-3 font-bold">
 						{t('hero.subtitle')}
-						<br className="sm:hidden" />{' '}
-						<span className="text-white/90">
+					</p>
+					<p className="text-xl sm:text-3xl font-bold mb-8">
+						<span className="text-gradient">
 							{t('hero.subtitleHighlight')}
 						</span>
 					</p>
@@ -77,26 +76,9 @@ export default function Home() {
 
 				{/* Scroll Down Indicator */}
 				<div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						width="28"
-						height="28"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="url(#chevron-grad)"
-						strokeWidth="2.5"
-						strokeLinecap="round"
-						strokeLinejoin="round"
-						className="scroll-indicator"
-					>
+					<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="url(#chevron-grad)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="scroll-indicator">
 						<defs>
-							<linearGradient
-								id="chevron-grad"
-								x1="0%"
-								y1="0%"
-								x2="100%"
-								y2="0%"
-							>
+							<linearGradient id="chevron-grad" x1="0%" y1="0%" x2="100%" y2="0%">
 								<stop offset="0%" stopColor="#a78bfa" />
 								<stop offset="50%" stopColor="#c084fc" />
 								<stop offset="100%" stopColor="#e879f9" />
@@ -104,26 +86,9 @@ export default function Home() {
 						</defs>
 						<polyline points="6 9 12 15 18 9" />
 					</svg>
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						width="28"
-						height="28"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="url(#chevron-grad2)"
-						strokeWidth="2.5"
-						strokeLinecap="round"
-						strokeLinejoin="round"
-						className="scroll-indicator-delayed -mt-3"
-					>
+					<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="url(#chevron-grad2)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="scroll-indicator-delayed -mt-3">
 						<defs>
-							<linearGradient
-								id="chevron-grad2"
-								x1="0%"
-								y1="0%"
-								x2="100%"
-								y2="0%"
-							>
+							<linearGradient id="chevron-grad2" x1="0%" y1="0%" x2="100%" y2="0%">
 								<stop offset="0%" stopColor="#a78bfa" />
 								<stop offset="50%" stopColor="#c084fc" />
 								<stop offset="100%" stopColor="#e879f9" />
@@ -131,26 +96,9 @@ export default function Home() {
 						</defs>
 						<polyline points="6 9 12 15 18 9" />
 					</svg>
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						width="28"
-						height="28"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="url(#chevron-grad3)"
-						strokeWidth="2.5"
-						strokeLinecap="round"
-						strokeLinejoin="round"
-						className="scroll-indicator-delayed-2 -mt-3"
-					>
+					<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="url(#chevron-grad3)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="scroll-indicator-delayed-2 -mt-3">
 						<defs>
-							<linearGradient
-								id="chevron-grad3"
-								x1="0%"
-								y1="0%"
-								x2="100%"
-								y2="0%"
-							>
+							<linearGradient id="chevron-grad3" x1="0%" y1="0%" x2="100%" y2="0%">
 								<stop offset="0%" stopColor="#a78bfa" />
 								<stop offset="50%" stopColor="#c084fc" />
 								<stop offset="100%" stopColor="#e879f9" />
@@ -161,7 +109,7 @@ export default function Home() {
 				</div>
 			</section>
 
-			{/* ===== Section 2: Problem & Value ===== */}
+			{/* ===== Section 2: Pain Points ===== */}
 			<section className="section-gradient py-20 sm:py-28 px-6 snap-section">
 				<div className="max-w-5xl mx-auto">
 					<div className="text-center mb-14">
@@ -169,108 +117,119 @@ export default function Home() {
 							WHY PICKIN
 						</p>
 						<h2 className="text-2xl sm:text-4xl font-bold text-foreground mb-5">
-							{t('whyPickin.title1')}
-							<br className="sm:hidden" /> {t('whyPickin.title2')}
+							{t('painPoints.title')}
 						</h2>
 						<p className="text-muted text-sm sm:text-lg max-w-3xl mx-auto leading-relaxed">
-							{t('whyPickin.subtitle')}
+							{t('painPoints.subtitle')}
 						</p>
 					</div>
 
 					<div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
 						{/* Card 1 */}
 						<div className="feature-card bg-white rounded-2xl p-6 border border-border">
-							<div className="w-12 h-12 rounded-xl bg-linear-to-br from-violet-500 to-indigo-500 flex items-center justify-center mb-5">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="22"
-									height="22"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="white"
-									strokeWidth="2"
-									strokeLinecap="round"
-									strokeLinejoin="round"
-								>
-									<circle cx="12" cy="12" r="10" />
-									<polyline points="12 6 12 12 16 14" />
+							<div className="w-12 h-12 rounded-xl bg-linear-to-br from-orange-400 to-rose-500 flex items-center justify-center mb-5">
+								<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+									<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
 								</svg>
 							</div>
 							<h3 className="text-lg font-bold text-foreground mb-2">
-								{t('whyPickin.card1Title')}
+								{t('painPoints.card1Title')}
 							</h3>
 							<p className="text-sm text-muted leading-relaxed mb-4">
-								{t('whyPickin.card1Problem')}
+								{t('painPoints.card1Problem')}
 							</p>
 							<p className="text-sm text-primary font-medium leading-relaxed">
-								{t('whyPickin.card1Solution')}
+								{t('painPoints.card1Solution')}
 							</p>
 						</div>
 
 						{/* Card 2 */}
 						<div className="feature-card bg-white rounded-2xl p-6 border border-border">
-							<div className="w-12 h-12 rounded-xl bg-linear-to-br from-purple-500 to-pink-500 flex items-center justify-center mb-5">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="22"
-									height="22"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="white"
-									strokeWidth="2"
-									strokeLinecap="round"
-									strokeLinejoin="round"
-								>
+							<div className="w-12 h-12 rounded-xl bg-linear-to-br from-amber-400 to-orange-500 flex items-center justify-center mb-5">
+								<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
 									<circle cx="12" cy="12" r="10" />
 									<line x1="2" y1="12" x2="22" y2="12" />
 									<path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
 								</svg>
 							</div>
 							<h3 className="text-lg font-bold text-foreground mb-2">
-								{t('whyPickin.card2Title')}
+								{t('painPoints.card2Title')}
 							</h3>
 							<p className="text-sm text-muted leading-relaxed mb-4">
-								{t('whyPickin.card2Problem')}
+								{t('painPoints.card2Problem')}
 							</p>
 							<p className="text-sm text-primary font-medium leading-relaxed">
-								{t('whyPickin.card2Solution')}
+								{t('painPoints.card2Solution')}
 							</p>
 						</div>
 
 						{/* Card 3 */}
 						<div className="feature-card bg-white rounded-2xl p-6 border border-border">
-							<div className="w-12 h-12 rounded-xl bg-linear-to-br from-indigo-500 to-blue-500 flex items-center justify-center mb-5">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="22"
-									height="22"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="white"
-									strokeWidth="2"
-									strokeLinecap="round"
-									strokeLinejoin="round"
-								>
-									<path d="M12 20V10" />
-									<path d="M18 20V4" />
-									<path d="M6 20v-4" />
+							<div className="w-12 h-12 rounded-xl bg-linear-to-br from-rose-400 to-pink-600 flex items-center justify-center mb-5">
+								<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+									<circle cx="12" cy="12" r="10" />
+									<line x1="15" y1="9" x2="9" y2="15" />
+									<line x1="9" y1="9" x2="15" y2="15" />
 								</svg>
 							</div>
 							<h3 className="text-lg font-bold text-foreground mb-2">
-								{t('whyPickin.card3Title')}
+								{t('painPoints.card3Title')}
 							</h3>
 							<p className="text-sm text-muted leading-relaxed mb-4">
-								{t('whyPickin.card3Problem')}
+								{t('painPoints.card3Problem')}
 							</p>
 							<p className="text-sm text-primary font-medium leading-relaxed">
-								{t('whyPickin.card3Solution')}
+								{t('painPoints.card3Solution')}
 							</p>
 						</div>
 					</div>
 				</div>
 			</section>
 
-			{/* ===== Section 3: How It Works ===== */}
+			{/* ===== Section 3: Validation ===== */}
+			<section className="cta-gradient py-20 sm:py-28 px-6 snap-section relative">
+				<div className="relative z-10 max-w-5xl mx-auto text-center">
+					<p className="text-sm font-semibold text-purple-300 tracking-widest uppercase mb-3">
+						FOR NANO &amp; MICRO CREATORS
+					</p>
+					<h2 className="text-3xl sm:text-5xl font-extrabold text-white mb-4 leading-tight">
+						<span className="text-gradient">{t('validation.title')}</span>
+					</h2>
+					<p className="text-white/50 text-sm sm:text-lg max-w-2xl mx-auto leading-relaxed mb-14">
+						{t('validation.description')}
+					</p>
+
+					{/* Stats */}
+					<div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+						<div className="bg-white/5 rounded-2xl p-6 border border-white/10 backdrop-blur-sm">
+							<p className="text-3xl sm:text-4xl font-extrabold text-gradient mb-2">
+								{t('validation.stat1Value')}
+							</p>
+							<p className="text-white/60 text-sm font-medium">
+								{t('validation.stat1Label')}
+							</p>
+						</div>
+						<div className="bg-white/5 rounded-2xl p-6 border border-white/10 backdrop-blur-sm">
+							<p className="text-3xl sm:text-4xl font-extrabold text-gradient mb-2">
+								{t('validation.stat2Value')}
+							</p>
+							<p className="text-white/60 text-sm font-medium">
+								{t('validation.stat2Label')}
+							</p>
+						</div>
+						<div className="bg-white/5 rounded-2xl p-6 border border-white/10 backdrop-blur-sm">
+							<p className="text-3xl sm:text-4xl font-extrabold text-gradient mb-2">
+								{t('validation.stat3Value')}
+							</p>
+							<p className="text-white/60 text-sm font-medium">
+								{t('validation.stat3Label')}
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			{/* ===== Section 4: How It Works ===== */}
 			<section className="section-gradient-alt py-20 sm:py-28 px-6 snap-section">
 				<div className="max-w-5xl mx-auto">
 					<div className="text-center mb-14">
@@ -334,283 +293,82 @@ export default function Home() {
 				</div>
 			</section>
 
-			{/* ===== Section 4: For Both Sides ===== */}
+			{/* ===== Section 5: Early Access ===== */}
 			<section className="section-gradient py-20 sm:py-28 px-6 snap-section">
 				<div className="max-w-5xl mx-auto">
 					<div className="text-center mb-14">
+						{/* Urgency Badge */}
+						<div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-orange-400/40 bg-orange-400/10 mb-5">
+							<div className="w-1.5 h-1.5 rounded-full bg-orange-400 animate-pulse" />
+							<span className="text-orange-400 text-xs font-bold tracking-widest uppercase">
+								{t('earlyAccess.urgencyBadge')}
+							</span>
+						</div>
 						<p className="text-sm font-semibold text-primary tracking-widest uppercase mb-3">
-							FOR EVERYONE
+							EARLY ACCESS
 						</p>
 						<h2 className="text-2xl sm:text-4xl font-bold text-foreground mb-5">
-							{t('forEveryone.title1')}
-							<br className="sm:hidden" /> {t('forEveryone.title2')}
+							{t('earlyAccess.title')}
 						</h2>
 						<p className="text-muted text-sm sm:text-lg max-w-3xl mx-auto leading-relaxed">
-							{t('forEveryone.subtitle')}
+							{t('earlyAccess.subtitle')}
 						</p>
 					</div>
 
-					<div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-						{/* For Brands */}
-						<div className="feature-card rounded-2xl p-7 bg-linear-to-br from-violet-50 to-indigo-50 border border-violet-100">
-							<div className="w-12 h-12 rounded-xl bg-linear-to-br from-violet-500 to-indigo-600 flex items-center justify-center mb-5">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="22"
-									height="22"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="white"
-									strokeWidth="2"
-									strokeLinecap="round"
-									strokeLinejoin="round"
-								>
-									<rect
-										x="2"
-										y="7"
-										width="20"
-										height="14"
-										rx="2"
-										ry="2"
-									/>
-									<path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+					<div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+						{/* Item 1 */}
+						<div className="feature-card bg-white rounded-2xl p-6 border border-border">
+							<div className="w-12 h-12 rounded-xl bg-linear-to-br from-violet-500 to-indigo-500 flex items-center justify-center mb-5">
+								<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+									<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
 								</svg>
 							</div>
-							<h3 className="text-xl font-bold text-foreground mb-3">
-								{t('forEveryone.brandTitle')}
+							<h3 className="text-lg font-bold text-foreground mb-2">
+								{t('earlyAccess.item1Title')}
 							</h3>
-							<ul className="space-y-3">
-								<li className="flex items-start gap-3 text-sm text-muted">
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="18"
-										height="18"
-										viewBox="0 0 24 24"
-										fill="none"
-										stroke="#7c3aed"
-										strokeWidth="2"
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										className="mt-0.5 shrink-0"
-									>
-										<polyline points="20 6 9 17 4 12" />
-									</svg>
-									{t('forEveryone.brandBenefit1')}
-								</li>
-								<li className="flex items-start gap-3 text-sm text-muted">
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="18"
-										height="18"
-										viewBox="0 0 24 24"
-										fill="none"
-										stroke="#7c3aed"
-										strokeWidth="2"
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										className="mt-0.5 shrink-0"
-									>
-										<polyline points="20 6 9 17 4 12" />
-									</svg>
-									{t('forEveryone.brandBenefit2')}
-								</li>
-								<li className="flex items-start gap-3 text-sm text-muted">
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="18"
-										height="18"
-										viewBox="0 0 24 24"
-										fill="none"
-										stroke="#7c3aed"
-										strokeWidth="2"
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										className="mt-0.5 shrink-0"
-									>
-										<polyline points="20 6 9 17 4 12" />
-									</svg>
-									{t('forEveryone.brandBenefit3')}
-								</li>
-							</ul>
+							<p className="text-sm text-muted leading-relaxed">
+								{t('earlyAccess.item1Desc')}
+							</p>
 						</div>
 
-						{/* For Influencers */}
-						<div className="feature-card rounded-2xl p-7 bg-linear-to-br from-purple-50 to-pink-50 border border-purple-100">
+						{/* Item 2 */}
+						<div className="feature-card bg-white rounded-2xl p-6 border border-border">
 							<div className="w-12 h-12 rounded-xl bg-linear-to-br from-purple-500 to-pink-500 flex items-center justify-center mb-5">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="22"
-									height="22"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="white"
-									strokeWidth="2"
-									strokeLinecap="round"
-									strokeLinejoin="round"
-								>
-									<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+								<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+									<path d="M12 2L2 7l10 5 10-5-10-5z" />
+									<path d="M2 17l10 5 10-5" />
+									<path d="M2 12l10 5 10-5" />
 								</svg>
 							</div>
-							<h3 className="text-xl font-bold text-foreground mb-3">
-								{t('forEveryone.influencerTitle')}
+							<h3 className="text-lg font-bold text-foreground mb-2">
+								{t('earlyAccess.item2Title')}
 							</h3>
-							<ul className="space-y-3">
-								<li className="flex items-start gap-3 text-sm text-muted">
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="18"
-										height="18"
-										viewBox="0 0 24 24"
-										fill="none"
-										stroke="#a855f7"
-										strokeWidth="2"
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										className="mt-0.5 shrink-0"
-									>
-										<polyline points="20 6 9 17 4 12" />
-									</svg>
-									{t('forEveryone.influencerBenefit1')}
-								</li>
-								<li className="flex items-start gap-3 text-sm text-muted">
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="18"
-										height="18"
-										viewBox="0 0 24 24"
-										fill="none"
-										stroke="#a855f7"
-										strokeWidth="2"
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										className="mt-0.5 shrink-0"
-									>
-										<polyline points="20 6 9 17 4 12" />
-									</svg>
-									{t('forEveryone.influencerBenefit2')}
-								</li>
-								<li className="flex items-start gap-3 text-sm text-muted">
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="18"
-										height="18"
-										viewBox="0 0 24 24"
-										fill="none"
-										stroke="#a855f7"
-										strokeWidth="2"
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										className="mt-0.5 shrink-0"
-									>
-										<polyline points="20 6 9 17 4 12" />
-									</svg>
-									{t('forEveryone.influencerBenefit3')}
-								</li>
-							</ul>
+							<p className="text-sm text-muted leading-relaxed">
+								{t('earlyAccess.item2Desc')}
+							</p>
+						</div>
+
+						{/* Item 3 */}
+						<div className="feature-card bg-white rounded-2xl p-6 border border-border">
+							<div className="w-12 h-12 rounded-xl bg-linear-to-br from-indigo-500 to-blue-500 flex items-center justify-center mb-5">
+								<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+									<circle cx="12" cy="12" r="10" />
+									<line x1="2" y1="12" x2="22" y2="12" />
+									<path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+								</svg>
+							</div>
+							<h3 className="text-lg font-bold text-foreground mb-2">
+								{t('earlyAccess.item3Title')}
+							</h3>
+							<p className="text-sm text-muted leading-relaxed">
+								{t('earlyAccess.item3Desc')}
+							</p>
 						</div>
 					</div>
 				</div>
 			</section>
 
-			{/* ===== Section 5: Beta Test Info ===== */}
-		<section className="section-gradient-alt py-20 sm:py-28 px-6 snap-section">
-			<div className="max-w-5xl mx-auto">
-				<div className="text-center mb-14">
-					<p className="text-sm font-semibold text-primary tracking-widest uppercase mb-3">
-						EARLY ACCESS
-					</p>
-					<h2 className="text-2xl sm:text-4xl font-bold text-foreground mb-5">
-						{t('betaInfo.title')}
-					</h2>
-					<p className="text-muted text-sm sm:text-lg max-w-3xl mx-auto leading-relaxed">
-						{t('betaInfo.subtitle')}
-					</p>
-				</div>
-
-				<div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-					{/* Item 1: April launch */}
-					<div className="feature-card bg-white rounded-2xl p-6 border border-border">
-						<div className="w-12 h-12 rounded-xl bg-linear-to-br from-violet-500 to-indigo-500 flex items-center justify-center mb-5">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								width="22"
-								height="22"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="white"
-								strokeWidth="2"
-								strokeLinecap="round"
-								strokeLinejoin="round"
-							>
-								<rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-								<line x1="16" y1="2" x2="16" y2="6" />
-								<line x1="8" y1="2" x2="8" y2="6" />
-								<line x1="3" y1="10" x2="21" y2="10" />
-							</svg>
-						</div>
-						<h3 className="text-lg font-bold text-foreground mb-2">
-							{t('betaInfo.item1Title')}
-						</h3>
-						<p className="text-sm text-muted leading-relaxed">
-							{t('betaInfo.item1Desc')}
-						</p>
-					</div>
-
-					{/* Item 2: First invite at launch */}
-					<div className="feature-card bg-white rounded-2xl p-6 border border-border">
-						<div className="w-12 h-12 rounded-xl bg-linear-to-br from-purple-500 to-pink-500 flex items-center justify-center mb-5">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								width="22"
-								height="22"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="white"
-								strokeWidth="2"
-								strokeLinecap="round"
-								strokeLinejoin="round"
-							>
-								<path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
-								<path d="M13.73 21a2 2 0 0 1-3.46 0" />
-							</svg>
-						</div>
-						<h3 className="text-lg font-bold text-foreground mb-2">
-							{t('betaInfo.item2Title')}
-						</h3>
-						<p className="text-sm text-muted leading-relaxed">
-							{t('betaInfo.item2Desc')}
-						</p>
-					</div>
-
-					{/* Item 3: Ongoing priority benefits */}
-					<div className="feature-card bg-white rounded-2xl p-6 border border-border">
-						<div className="w-12 h-12 rounded-xl bg-linear-to-br from-indigo-500 to-blue-500 flex items-center justify-center mb-5">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								width="22"
-								height="22"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="white"
-								strokeWidth="2"
-								strokeLinecap="round"
-								strokeLinejoin="round"
-							>
-								<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-							</svg>
-						</div>
-						<h3 className="text-lg font-bold text-foreground mb-2">
-							{t('betaInfo.item3Title')}
-						</h3>
-						<p className="text-sm text-muted leading-relaxed">
-							{t('betaInfo.item3Desc')}
-						</p>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		{/* ===== Section 6: Waiting List Form ===== */}
+			{/* ===== Section 6: Waitlist Form ===== */}
 			<section id="waitlist" className="cta-gradient snap-section min-h-screen flex flex-col justify-center">
 				<div className="relative z-10 w-full max-w-6xl mx-auto py-20 sm:py-28 px-6 flex-1 flex flex-col justify-center">
 					<div className="text-center mb-6">
@@ -622,7 +380,6 @@ export default function Home() {
 						</h2>
 						<p className="text-white/50 text-base mx-auto leading-relaxed">
 							{t('waitlist.description1')}
-							<br className="sm:hidden" /> {t('waitlist.description2')}
 						</p>
 					</div>
 
@@ -631,38 +388,16 @@ export default function Home() {
 						<p className="text-xs font-semibold tracking-widest uppercase text-purple-300 mb-1">
 							{t('waitlist.betaTitle')}
 						</p>
-						{betaTab === 'advertiser' ? (
-							<p className="text-sm text-white/70 leading-relaxed">
-								{t('waitlist.betaPrefix')}{' '}
-								<span className="text-white font-semibold">
-									{t('waitlist.betaBrands')}
-								</span>{' '}
-								{t('waitlist.betaMiddle')}
-								<br className="sm:hidden" />{' '}
-								<span className="text-gradient font-semibold">
-									{t('waitlist.betaBenefit')}
-								</span>{' '}
-								{t('waitlist.betaSuffix')}
-							</p>
-						) : (
-							<p className="text-sm text-white/70 leading-relaxed">
-								{t('waitlist.influencerBetaPrefix')}{' '}
-								<span className="text-white font-semibold">
-									{t('waitlist.influencerBetaCount')}
-								</span>{' '}
-								{t('waitlist.influencerBetaMiddle')}
-								<br className="sm:hidden" />{' '}
-								<span className="text-gradient font-semibold">
-									{t('waitlist.influencerBetaBenefit')}
-								</span>{' '}
-								{t('waitlist.influencerBetaSuffix')}
-							</p>
-						)}
+						<p className="text-sm text-white/70 leading-relaxed">
+							<span className="text-gradient font-semibold">
+								{t('waitlist.betaBenefit')}
+							</span>
+						</p>
 					</div>
 
 					{/* Form Container */}
-					<div className="glass-card rounded-3xl p-6 sm:p-6 max-w-2xl mx-auto w-full">
-						<WaitingListForm activeTab={betaTab} onTabChange={setBetaTab} />
+					<div className="glass-card rounded-3xl p-6 sm:p-8 max-w-2xl mx-auto w-full">
+						<WaitingListForm />
 					</div>
 
 					{/* Trust note */}

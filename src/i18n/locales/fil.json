@@ -1,0 +1,93 @@
+{
+	"hero": {
+		"badge": "K-Beauty Brand Collabs · Bukas na ang Pre-Registration",
+		"subtitle": "Walang minimum na followers. Walang hadlang sa wika.",
+		"subtitleHighlight": "Ang mga K-beauty brand ang unang lalapit sa iyo.",
+		"description1": "Platform na nag-uugnay ng mga piniling K-beauty brand sa nano at micro influencer sa Southeast Asia.",
+		"description2": "Mula sa 1,000 followers · Makipagtulungan sa iyong sariling wika.",
+		"cta": "Mag-sign up sa Waitlist"
+	},
+	"painPoints": {
+		"title": "Nangyari na ba ito sa iyo?",
+		"subtitle": "Ginawa ang PICKIN para solusyunan ang mga problemang ito",
+		"card1Title": "Nag-DM sa brand pero walang sumasagot.",
+		"card1Problem": "Nakipag-ugnayan ka, naghintay, nagpadala ulit, tapos naghintay pa. Bihira makatanggap ng tunay na alok ng kolaborasyon.",
+		"card1Solution": "Sa PICKIN, ang brand mismo ang maghahanap sa iyo at magpapadala ng alok ng kolaborasyon nang direkta.",
+		"card2Title": "Mahirap makipag-usap sa foreign brands.",
+		"card2Problem": "Ang hadlang sa wika ay nagdudulot ng napalampas na pagkakataon. Maling pagsasalin ay maaaring masira ang deal bago pa magsimula.",
+		"card2Solution": "Sa PICKIN, makakausap mo ang mga brand gamit ang sarili mong wika nang walang kahirap-hirap.",
+		"card3Title": "Tinanggihan dahil 'kulang ang followers'.",
+		"card3Problem": "Nag-apply ka sa campaign pero natanggal dahil sa bilang ng followers. Ang tunay mong impluwensya ay hindi nakikita ng sinuman.",
+		"card3Solution": "Bawat brand sa PICKIN ay espesipikong naghahanap ng nano at micro creator — ikaw iyon."
+	},
+	"validation": {
+		"title": "Sapat na ang 1,000 followers.",
+		"subtitle": "Kakaunting followers. Tunay na impluwensya.",
+		"description": "Ang conversion rate ng nano influencer ay mas mataas kaysa sa mga celebrity na may milyun-milyong followers. Alam na ito ng mga brand. Ang PICKIN ay itinayo batay sa katotohanang ito.",
+		"stat1Value": "Nano",
+		"stat1Label": "1K – 10K followers",
+		"stat2Value": "Micro",
+		"stat2Label": "10K – 100K followers",
+		"stat3Value": "6 bansa",
+		"stat3Label": "Target na merkado sa Southeast Asia"
+	},
+	"howItWorks": {
+		"title": "3 hakbang. 60 segundo.",
+		"subtitle": "Mag-register at maghintay. PICKIN ang bahala sa natitira.",
+		"step1Title": "Sumali sa Waitlist",
+		"step1Description": "Ilagay ang iyong SNS account, bansa, at platform. Tapos sa loob ng 1 minuto.",
+		"step2Title": "Gagawa ang AI ng Iyong Profile",
+		"step2Description": "Pagkatapos ng paglulunsad, sinusuri ng AI ang iyong estilo ng content, engagement, at audience para gumawa ng iyong creator profile.",
+		"step3Title": "Ang Brand ang Lalapit sa Iyo",
+		"step3Description": "Tinitingnan ng mga brand sa PICKIN ang iyong profile at nagpapadala ng mga alok ng kolaborasyon. Ikaw ang magpapasya."
+	},
+	"earlyAccess": {
+		"title": "Bakit kailangan mag-register ngayon",
+		"subtitle": "Eksklusibong benepisyo para sa mga early creator lamang",
+		"urgencyBadge": "LIMITADONG SLOTS",
+		"item1Title": "Unang 300 ay Magiging Priority sa Matching",
+		"item1Desc": "Ang mga miyembro ng waitlist ay makakakuha ng unang access sa brand campaign sa sandaling ilunsad ang PICKIN. Mas maraming brand, mas kaunting kompetisyon.",
+		"item2Title": "Libre sa Beta — Walang Nakatagong Bayad",
+		"item2Desc": "Ang mga miyembro ng beta ay gagamitin ang lahat ng feature ng platform nang ganap na libre. Walang subscription. Walang komisyon.",
+		"item3Title": "Ang Iyong Wika, Ang Iyong Merkado",
+		"item3Desc": "Sinusuportahan ang Thai, Vietnamese, Indonesian, Filipino, at English. Makipagtulungan sa mga brand nang walang interpreter."
+	},
+	"waitlist": {
+		"title": "Mag-register sa 30 segundo",
+		"description1": "Maging isa sa mga unang creator sa Southeast Asia sa PICKIN.",
+		"description2": "",
+		"betaTitle": "Mga Benepisyo ng Maagang Pagpaparehistro",
+		"betaBenefit": "Libreng beta access + Priority matching + Unang imbitasyon sa opisyal na paglulunsad",
+		"trustNote": "Walang spam. Walang bayad. Early access lang."
+	},
+	"footer": {
+		"contactEmail": "Makipag-ugnayan"
+	},
+	"form": {
+		"name": "Pangalan",
+		"namePlaceholder": "Ilagay ang iyong pangalan",
+		"snsAccount": "URL ng SNS Account",
+		"snsPlaceholder": "I-paste ang URL ng iyong account",
+		"platform": "Pangunahing Platform",
+		"platformPlaceholder": "Piliin ang platform",
+		"platformInstagram": "Instagram",
+		"platformTikTok": "TikTok",
+		"platformYouTube": "YouTube",
+		"platformOther": "Iba pa",
+		"followerRange": "Bilang ng Followers",
+		"followerRangePlaceholder": "Piliin ang hanay ng followers",
+		"followerNano": "Nano (1K – 10K)",
+		"followerMicro": "Micro (10K – 100K)",
+		"followerMid": "Mid (100K+)",
+		"email": "Email Address",
+		"country": "Bansa",
+		"countryPlaceholder": "Piliin ang iyong bansa",
+		"countrySearchPlaceholder": "Maghanap ng bansa...",
+		"countryNoResults": "Walang nahanap na resulta",
+		"submitting": "Isinusumite...",
+		"submitted": "Nairehistro!",
+		"submitButton": "Sumali sa Waitlist",
+		"successMessage": "Matagumpay na nairehistro! Makikipag-ugnayan kami sa iyo sa lalong madaling panahon.",
+		"errorFallback": "Nabigo ang pagsumite. Pakisubukang muli."
+	}
+}

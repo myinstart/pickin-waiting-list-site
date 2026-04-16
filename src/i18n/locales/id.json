@@ -1,0 +1,93 @@
+{
+	"hero": {
+		"badge": "Kolaborasi Brand K-Beauty · Pendaftaran Awal Dibuka",
+		"subtitle": "Tanpa syarat followers. Tanpa hambatan bahasa.",
+		"subtitleHighlight": "Brand K-Beauty yang menemukan kamu duluan.",
+		"description1": "Platform yang menghubungkan brand K-Beauty pilihan dengan nano & micro influencer Asia Tenggara.",
+		"description2": "Mulai dari 1.000 followers · Berkolaborasi dalam bahasamu.",
+		"cta": "Daftar Waitlist"
+	},
+	"painPoints": {
+		"title": "Pernah merasakan ini?",
+		"subtitle": "PICKIN dibuat untuk menyelesaikan masalah-masalah ini",
+		"card1Title": "DM ke brand tapi tidak dibalas.",
+		"card1Problem": "Kamu menghubungi, menunggu, follow up, lalu menunggu lagi. Tawaran kolaborasi nyata jarang datang.",
+		"card1Solution": "Dengan PICKIN, brand yang menemukan kamu lebih dulu dan mengirim penawaran kolaborasi langsung.",
+		"card2Title": "Susah berkomunikasi dengan brand luar negeri.",
+		"card2Problem": "Hambatan bahasa membuat kamu melewatkan peluang. Terjemahan yang salah bisa membatalkan deal sebelum dimulai.",
+		"card2Solution": "PICKIN memungkinkan kamu berkomunikasi dengan brand menggunakan bahasamu sendiri, dengan mudah.",
+		"card3Title": "Ditolak karena 'followers kurang'.",
+		"card3Problem": "Kamu mendaftar campaign tapi tersingkir karena jumlah followers. Pengaruh nyatamu tidak terlihat siapapun.",
+		"card3Solution": "Setiap brand di PICKIN memang mencari nano dan micro creator seperti kamu."
+	},
+	"validation": {
+		"title": "1.000 followers sudah cukup.",
+		"subtitle": "Followers sedikit. Pengaruh nyata.",
+		"description": "Tingkat konversi pembelian nano influencer lebih tinggi daripada selebriti jutaan followers. Brand sudah tahu ini. PICKIN dibangun berdasarkan kebenaran itu.",
+		"stat1Value": "Nano",
+		"stat1Label": "1K – 10K followers",
+		"stat2Value": "Micro",
+		"stat2Label": "10K – 100K followers",
+		"stat3Value": "6 negara",
+		"stat3Label": "Target pasar Asia Tenggara"
+	},
+	"howItWorks": {
+		"title": "3 langkah. 60 detik.",
+		"subtitle": "Daftar dan tunggu. PICKIN urus sisanya.",
+		"step1Title": "Bergabung ke Waitlist",
+		"step1Description": "Masukkan akun SNS, negara, dan platform-mu. Selesai dalam kurang dari 1 menit.",
+		"step2Title": "AI Membangun Profilmu",
+		"step2Description": "Setelah diluncurkan, AI menganalisis gaya konten, engagement, dan audience untuk membangun profil creator-mu.",
+		"step3Title": "Brand Datang Kepadamu",
+		"step3Description": "Brand di PICKIN melihat profilmu dan mengirim penawaran kolaborasi. Kamu yang memutuskan untuk menerima atau tidak."
+	},
+	"earlyAccess": {
+		"title": "Kenapa harus daftar sekarang",
+		"subtitle": "Keuntungan eksklusif hanya untuk early creator",
+		"urgencyBadge": "TEMPAT TERBATAS",
+		"item1Title": "300 Orang Pertama Dapat Prioritas Matching",
+		"item1Desc": "Anggota waitlist mendapat akses pertama ke brand campaign begitu PICKIN diluncurkan. Lebih banyak brand, lebih sedikit persaingan.",
+		"item2Title": "Gratis Selama Beta — Tanpa Biaya Tersembunyi",
+		"item2Desc": "Anggota beta menggunakan semua fitur platform sepenuhnya gratis. Tanpa langganan. Tanpa komisi.",
+		"item3Title": "Bahasamu, Pasarmu",
+		"item3Desc": "Mendukung bahasa Thai, Vietnam, Indonesia, Filipino, dan Inggris. Berkolaborasi dengan brand tanpa penerjemah."
+	},
+	"waitlist": {
+		"title": "Daftar dalam 30 detik",
+		"description1": "Jadilah salah satu creator Asia Tenggara pertama di PICKIN.",
+		"description2": "",
+		"betaTitle": "Keuntungan Pendaftaran Awal",
+		"betaBenefit": "Akses beta gratis + Prioritas matching + Undangan pertama saat peluncuran resmi",
+		"trustNote": "Tidak ada spam. Tidak ada biaya. Hanya early access."
+	},
+	"footer": {
+		"contactEmail": "Kontak"
+	},
+	"form": {
+		"name": "Nama",
+		"namePlaceholder": "Masukkan namamu",
+		"snsAccount": "URL Akun SNS",
+		"snsPlaceholder": "Tempel URL akun-mu",
+		"platform": "Platform Utama",
+		"platformPlaceholder": "Pilih platform",
+		"platformInstagram": "Instagram",
+		"platformTikTok": "TikTok",
+		"platformYouTube": "YouTube",
+		"platformOther": "Lainnya",
+		"followerRange": "Jumlah Followers",
+		"followerRangePlaceholder": "Pilih rentang followers",
+		"followerNano": "Nano (1K – 10K)",
+		"followerMicro": "Micro (10K – 100K)",
+		"followerMid": "Mid (100K+)",
+		"email": "Alamat Email",
+		"country": "Negara",
+		"countryPlaceholder": "Pilih negaramu",
+		"countrySearchPlaceholder": "Cari negara...",
+		"countryNoResults": "Tidak ada hasil",
+		"submitting": "Mengirim...",
+		"submitted": "Terdaftar!",
+		"submitButton": "Bergabung ke Waitlist",
+		"successMessage": "Pendaftaran berhasil! Kami akan segera menghubungimu.",
+		"errorFallback": "Pengiriman gagal. Silakan coba lagi."
+	}
+}

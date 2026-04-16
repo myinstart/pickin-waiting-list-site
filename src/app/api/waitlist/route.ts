@@ -9,9 +9,9 @@ const databaseId = process.env.NOTION_DATABASE_ID!;
 
 export async function POST(request: Request) {
   try {
-    const { name, type, email, snsAccount, country } = await request.json();
+    const { name, email, snsAccount, platform, followerRange, country } = await request.json();
 
-    if (!name || !type || !email) {
+    if (!name || !email) {
       return NextResponse.json(
         { error: "필수 항목을 입력해주세요." },
         { status: 400 }
@@ -29,14 +29,26 @@ export async function POST(request: Request) {
           ],
         },
         대상: {
-          select: { name: type },
+          select: { name: "인플루언서" },
         },
         Email: {
           email: email,
         },
-        "SNS 계정": {
-          url: snsAccount || null,
-        },
+        ...(snsAccount && {
+          "SNS 계정": {
+            url: snsAccount,
+          },
+        }),
+        ...(platform && {
+          플랫폼: {
+            select: { name: platform },
+          },
+        }),
+        ...(followerRange && {
+          "팔로워 수": {
+            select: { name: followerRange },
+          },
+        }),
         ...(country && {
           국가: {
             select: { name: country },

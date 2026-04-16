@@ -12,16 +12,18 @@ import ko from './locales/ko.json';
 import en from './locales/en.json';
 import vi from './locales/vi.json';
 import th from './locales/th.json';
-import zh from './locales/zh.json';
+import id from './locales/id.json';
+import fil from './locales/fil.json';
 
-export type Locale = 'ko' | 'en' | 'vi' | 'th' | 'zh';
+export type Locale = 'ko' | 'en' | 'vi' | 'th' | 'id' | 'fil';
 
 export const LOCALE_LABELS: Record<Locale, string> = {
 	ko: '한국어',
 	en: 'English',
 	vi: 'Tiếng Việt',
 	th: 'ภาษาไทย',
-	zh: '中文',
+	id: 'Bahasa Indonesia',
+	fil: 'Filipino',
 };
 
 const translations: Record<Locale, Record<string, unknown>> = {
@@ -29,7 +31,8 @@ const translations: Record<Locale, Record<string, unknown>> = {
 	en,
 	vi,
 	th,
-	zh,
+	id,
+	fil,
 };
 
 type LanguageContextType = {
@@ -66,6 +69,9 @@ function detectBrowserLanguage(): Locale {
 	const browserLang =
 		navigator.language || navigator.languages?.[0] || 'ko';
 	const langCode = browserLang.split('-')[0].toLowerCase();
+
+	// Map Tagalog browser code to our locale
+	if (langCode === 'tl') return 'fil';
 
 	if (langCode in translations) return langCode as Locale;
 

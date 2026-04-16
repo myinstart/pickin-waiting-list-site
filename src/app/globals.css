@@ -9,6 +9,8 @@
   --secondary: #6366f1;
   --accent: #c084fc;
   --accent-pink: #e879f9;
+  --accent-warm: #f97316;
+  --accent-coral: #fb7185;
   --surface: #ffffff;
   --surface-hover: #f5f3ff;
   --muted: #6b7280;
@@ -24,6 +26,8 @@
   --color-secondary: var(--secondary);
   --color-accent: var(--accent);
   --color-accent-pink: var(--accent-pink);
+  --color-accent-warm: var(--accent-warm);
+  --color-accent-coral: var(--accent-coral);
   --color-surface: var(--surface);
   --color-surface-hover: var(--surface-hover);
   --color-muted: var(--muted);
@@ -34,8 +38,21 @@
 
 * {
   scroll-behavior: smooth;
-  word-break: keep-all;
+  word-break: normal;
   overflow-wrap: break-word;
+}
+
+/* Korean needs keep-all to prevent awkward mid-phrase breaks */
+html:lang(ko) * {
+  word-break: keep-all;
+}
+
+/* Prevent body scroll on desktop — snap-container handles all scrolling */
+@media (min-width: 640px) {
+  html, body {
+    overflow: hidden;
+    height: 100%;
+  }
 }
 
 /* Scroll snap - desktop only */
@@ -45,6 +62,13 @@
     overflow-y: auto;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
+    /* Hide scrollbar while keeping scroll functionality */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+  }
+
+  .snap-container::-webkit-scrollbar {
+    display: none; /* Chrome/Safari/Opera */
   }
 
   .snap-section {
